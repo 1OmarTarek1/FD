@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Define dark mode variables */
+:root {
+    /* Primary Colors */
+    --color-primary         : #ed1c24;
+    --color-secondary       : #010a1a;
+    --color-tertiary        : #fff;
+
+
+    /* Background Colors */
+    --bg-body               : #010a1a;
+    --bg-nav                : var(--color-black);
+    --bg-container          : var(--glassBG-light);
+    --bg-section            : #1A1A1A;
+    --bg-component          : #fff;
+    --bg-footer             : #1a2331;
+
+    /* Font Colors */
+    --font-mainColor        : #FFF;
+    --font-secondaryColor   : #80858d;
+    --font-tertiaryColor    : #010a1a;
+    --font-navColor         : #fff;
+
+    /* ================================================== */
+    /* ================================================== */
+
+    /* Other */
+    --transition-main       : all .3s ease;
+    --transition-animation  : all .2s ease-in-out;
+    /* --distance-main         : 75px;
+    --margin-main           : calc(var(--distance-main) - ( var(--distance-main) / 2 ));
+    --padding-main          : calc(var(--distance-main) - ( var(--distance-main) / 3 )); */
+}
+
+/* Define light mode variables */
+[data-theme='light'] {
+
+    /* Background Colors */
+    --bg-body               : #010a1a;
+    --bg-nav                : var(--color-black);
+    --bg-container          : var(--glassBG-light);
+    --bg-section            : #1A1A1A;
+    --bg-component          : #27292a;
+    --bg-footer             : #1a2331;
+
+
+    /* Font Colors */
+    --font-mainColor        : #000000;
+    --font-secondaryColor   : #333333;
+    --font-navColor         : #fff;
+}
+
+
+
+
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+
+::-webkit-scrollbar        { width: 8px;                              }
+::-webkit-scrollbar-track  { background-color: var(--color-tertiary); }
+::-webkit-scrollbar-thumb  { background-color: var(--color-primary);  }
+::-webkit-scrollbar-button { background-color: var(--color-primary);  }
+
+
+body {
+    font-family: "Roboto", system-ui, sans-serif;
+    background-color:  var(--bg-body) ;
+    color: var(--font-mainColor);
+    /* transition: var(--transition-main); */
+    height: 400vh;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+input{
+    outline: none;
+    
+} 
+input:focus{
+    outline: none;
+} 
+
+
+.App{
+    max-width: 1400px;
+    margin: auto;
+    /* padding-inline: 25px; */
+}

@@ -1,0 +1,68 @@
+.secondary-btn{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 17px 35px;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition-animation);
+    overflow: hidden;
+}
+.secondary-btn::before{
+    content: "";
+    position: absolute;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    border: 2px solid var(--color-primary);
+    background-color: var(--color-primary);
+    transition: var(--transition-animation);
+    z-index: -1;
+}
+.arrow-wrapper{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    transition: var(--transition-animation);
+}
+.btn-Icon{
+    position: absolute;
+    font-size: 18px;
+    transition: var(--transition-animation);
+}
+.btn-Icon-1{
+    left: 50%;
+    top: 49%;
+    transform: translate(-50%, -50%);
+}
+.btn-Icon-2{
+    left: -100%;
+    top: 49%;
+    transform: translateY(-50%);
+}
+
+
+/*start effect*/
+.secondary-btn:hover{
+    border: 2px solid var(--color-primary);
+}
+.secondary-btn:hover::before{
+    left: 100%;
+}
+.secondary-btn:hover .btn-Icon-1{
+    left: 100%;
+    transform: translate(0%, -50%);
+}
+.secondary-btn:hover .btn-Icon-2{
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

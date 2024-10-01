@@ -1,0 +1,46 @@
+
+.menu-icon {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer; 
+    font-size: 24px; 
+    transition: var(--transition-main);
+}
+.icon-line{
+    position: relative;
+    height: 2px;
+    width: 20px;
+    background-color: var(--color-primary);
+    opacity: 1;
+    transition: var(--transition-main);
+}
+
+/*open effect*/
+.menu-icon.open {
+    gap: 0px;
+}
+.menu-icon.open .line-top{
+    transform: rotate(225deg);
+    top: 1px;
+}
+.menu-icon.open .line-bott{
+    transform: rotate(135deg);
+    top: -1px;
+}
+.menu-icon.open .line-mid{
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+
+
+@media (min-width: 992px) {
+    .menu-icon {
+        display: none; 
+    }
+}

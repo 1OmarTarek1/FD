@@ -1,0 +1,64 @@
+.cirPrimary-btn{
+    flex-shrink: 0;
+    position: relative;
+    width: fit-content;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--color-primary);
+    overflow: hidden;
+}
+.cirStyle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    color: var(--font-mainColor);
+    font-size: 17px;
+    transition: var(--transition-animation);
+}
+.bg-cirBtn{
+    transform: translateX(-100%);
+    z-index: 0;
+    border: 2px solid var(--color-primary);
+    background-color: var(--color-primary);
+}
+.priIcon{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    transition: var(--transition-animation);
+    overflow: hidden;
+}
+.arrowBtn{
+    position: absolute;
+    top: 49%;    
+    left: 50%;
+    transition: var(--transition-animation);
+}
+.arrow-one1{
+    transform: translate(-50%, -50%);
+}
+.arrow-two2{
+    transform: translate(-150%, -50%);
+}
+
+
+/*start effect*/
+.cirPrimary-btn:hover .bg-cirBtn{
+    transform: translateX(0%);
+}
+.cirPrimary-btn:hover .arrow-one1{
+    transform: translate(50%, -50%);
+}
+.cirPrimary-btn:hover .arrow-two2{
+    transform: translate(-50%, -50%);
+}

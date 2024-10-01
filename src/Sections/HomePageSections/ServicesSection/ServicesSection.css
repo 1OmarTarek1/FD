@@ -1,0 +1,15 @@
+
+.section-title{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.all-servicesCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1px;
+    border-top: 1px solid var(--bg-footer);
+    border-bottom: 1px solid var(--bg-footer);
+    background-color: var(--bg-footer);
+}
