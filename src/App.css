@@ -73,7 +73,6 @@ body {
     background-color:  var(--bg-body) ;
     color: var(--font-mainColor);
     /* transition: var(--transition-main); */
-    height: 400vh;
 }
 
 ul {

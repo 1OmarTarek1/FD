@@ -13,7 +13,7 @@ const App = () => {
     }, []);
 
     return (
-        <Router basename='FDC'>
+        <Router basename='FD'>
             <NavbarSec />
             <div className="App">
                     <WebRoutes />

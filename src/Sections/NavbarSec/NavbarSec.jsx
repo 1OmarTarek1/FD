@@ -1,87 +1,131 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import Headroom from 'react-headroom';
-import { NavMenuBtn, TertiaryBtn } from '../../Components';
+import { NavMenuBtn, NestedMegaMenu, TertiaryBtn } from '../../Components';
 import logoImg from '../../Assets/logoNav.png';
 import { IoArrowForward } from "react-icons/io5";
 import './NavbarSec.css';
+import { IoIosArrowForward } from 'react-icons/io';
 
 const NavbarSec = () => {
-    const [isOpen, setIsOpen] = useState(false); // State to manage open/close
-    const menuRef = useRef(null); // Ref for the menu
-    const iconRef = useRef(null); // Ref for the menu icon
+    const [isOpen, setIsOpen] = useState(false); 
+    const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false); 
+    const menuRef = useRef(null); 
+    const iconRef = useRef(null); 
+    const location = useLocation(); 
 
 
-    // Function to toggle the menu
+    // Toggle nav menu
     const toggleMenu = () => {
         setIsOpen(prevState => !prevState);
+        setIsMegaMenuOpen(false);
     };
 
-    // Close the menu when clicking outside of it
+    // Toggle mega menu and close the main menu
+    const toggleMegaMenu = () => {
+        // setIsOpen(false); // Close main menu
+        setIsMegaMenuOpen(prevState => !prevState);
+    };
+
+
+    // Close the menus when clicking outside
     const handleClickOutside = (event) => {
-        // Check if the click was outside the menu and icon
         if (
             menuRef.current && !menuRef.current.contains(event.target) && 
-            iconRef.current && !iconRef.current.contains(event.target)
+            iconRef.current && !iconRef.current.contains(event.target) 
         ) {
             setIsOpen(false);
+            setIsMegaMenuOpen(false); 
         }
     };
 
     useEffect(() => {
-        // Add event listener for clicks outside the menu
         document.addEventListener('mousedown', handleClickOutside);
 
-        // Cleanup the event listener on unmount
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
 
+    // Close the menu after clicking a link
+    const closeMenu = () => {
+        setIsOpen(false);
+        setIsMegaMenuOpen(false); 
+    };
+
+    const isServicesActive = location.pathname.includes("services");
+
+
     return (
         <Headroom>
             <div className='nav-container'>
                 <nav className='the-nav'>
-                    <a href='#!' className="logo">
-                        <img src={logoImg} alt="logo" className='logo-img' />
-                    </a>
+                    <NavLink to='/' className="logo-wrapper">
+                        <div className="logo">
+                            <img src={logoImg} alt="logo" className='logo-img' />
+                        </div>
+                        <div className="company-name">
+                            <div className="name">
+                                FD Energies
+                            </div>
+                            <div className="description">
+                                Oil & Gas Services
+                            </div>
+                        </div>
+                    </NavLink>
                     <NavMenuBtn 
-                    isOpen={isOpen}
-                    toggleMenu={toggleMenu}
-                    iconRef={iconRef}
+                        isOpen={isOpen}
+                        toggleMenu={toggleMenu}
+                        iconRef={iconRef}
                     />
                     <ul className={`webLinks ${isOpen ? 'open' : ''}`} ref={menuRef}>
-                        <a href="#!" className="web-link">
+                        <NavLink to="/" className="web-link" onClick={closeMenu}>
                             <li className="link-wrapper">
-                                Services
+                                Home
                                 <span className='link-arrow'>
                                     <IoArrowForward />
                                 </span>
                             </li>
-                        </a>
-                        <a href="#!" className="web-link">
+                        </NavLink>
+                        <div className={`web-link nest-wrapper ${isMegaMenuOpen || isServicesActive ? 'active' : ''}`}
+                        onClick={toggleMegaMenu} 
+                        style={{cursor: "pointer"}}
+                        >
+                            <li className="link-wrapper">
+                                Services
+                                <span className={`link-arrow nested-arrow ${isMegaMenuOpen && 'opened'}`}>
+                                    <IoIosArrowForward />
+                                </span>
+                            </li>
+                            <NestedMegaMenu 
+                                isMegaMenuOpen={isMegaMenuOpen}
+                                setIsOpen={setIsOpen}
+                            />
+                        </div>
+                        <NavLink to="/projects" className="web-link" onClick={closeMenu}>
                             <li className="link-wrapper">
                                 Projects
                                 <span className='link-arrow'>
                                     <IoArrowForward />
                                 </span>
                             </li>
-                        </a>
-                        <a href="#!" className="web-link">
+                        </NavLink>
+                        <NavLink to="/about" className="web-link" onClick={closeMenu}>
                             <li className="link-wrapper">
                                 About Us
                                 <span className='link-arrow'>
                                     <IoArrowForward />
                                 </span>
                             </li>
-                        </a>
-                        <a href="#!" className="web-link">
+                        </NavLink>
+                        <NavLink to="/contact" className="web-link" onClick={closeMenu}>
                             <li className="link-wrapper">
                                 Contact Us
                                 <span className='link-arrow'>
                                     <IoArrowForward />
                                 </span>
                             </li>
-                        </a>
+                        </NavLink>
                         <div className="btn-wrapper">
                             <TertiaryBtn>Send Message</TertiaryBtn>
                         </div>
@@ -91,5 +135,6 @@ const NavbarSec = () => {
         </Headroom>
     );
 };
+
 
 export default NavbarSec;

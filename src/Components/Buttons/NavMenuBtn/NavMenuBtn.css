@@ -26,15 +26,15 @@
 }
 .menu-icon.open .line-top{
     transform: rotate(225deg);
-    top: 1px;
+    top: 2px;
 }
 .menu-icon.open .line-bott{
     transform: rotate(135deg);
-    top: -1px;
+    top: -2px;
 }
 .menu-icon.open .line-mid{
     width: 0px;
-    height: 0px;
+    /* height: 0px; */
     opacity: 0;
 }
 

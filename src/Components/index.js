@@ -1,6 +1,8 @@
 export { default as WebRoutes } from './WebRoutes/WebRoutes'
-
 export { default as SectionWrapper } from './SectionWrapper/SectionWrapper'
+
+// Navbar Components
+export { default as NestedMegaMenu } from './NavbarComponents/NestedMegaMenu/NestedMegaMenu'
 
 // Home Page Components
 export { default as HeaderCarousel } from './HomeComponents/HeaderCarousel/HeaderCarousel'

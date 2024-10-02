@@ -8,15 +8,24 @@ import './HeaderCarousel.css';
 const carouselData = [
     {
         image: imgOne,
-        text: 'Lorem ipsum dolor sit amet elit. Alias odit est eaque labore. Lorem ipsum dolor sit amet elit. Alias.'
+        text: <>
+            Lorem ipsum dolor sit amet elit.  Alias odit est eaque labore.
+            <font color="red"> Lorem ipsum dolor sit amet elit Alias.</font>
+        </>
     },
     {
         image: imgTwo,
-        text: 'Vivamus laoreet. Nullam tincidunt adipiscing enim. Vivamus laoreet. Nullam tincidunt adipiscing enim.'
+        text: <>
+            Vivamus laoreet <font color="red"> Nullam tincidunt adipiscing enim.</font> 
+            Vivamus laoreet. Nullam tincidunt adipiscing enim.
+        </>
     },
     {
         image: imgThree,
-        text: 'Quisque volutpat condimentum velit. Class aptent taciti. Quisque volutpat condimentum velit.'
+        text: <>
+            Quisque volutpat condimentum velit. 
+            <font color="red"> Class aptent taciti.</font> Quisque volutpat condimentum velit.
+        </>
     }
 ];
 

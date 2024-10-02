@@ -21,23 +21,29 @@
 }
 
 .content-wrapper {
-    background-color: var(--bg-component);
-    color: var(--font-tertiaryColor);
     justify-content: space-between;
     width: 38.625rem;
     margin-right: 1.25rem;
-    padding: 3rem 4.25rem 2.5rem 3rem;
+    padding: 3rem 3.25rem 2rem 3rem;
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     right: 0;
+    background-color: var(--bg-component); 
+    color: var(--font-tertiaryColor); 
+    /* background-color: #00000044; */
+    /* color: var(--font-mainColor); */
+    /* backdrop-filter: blur(8px); */
+    border: 1px solid #ffffff1f;
+    border-radius: 5px;
+    box-shadow: 0px 0px 7px 0px #0000006c;
 }
 
 .carousel-paragraph {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.25;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -51,6 +57,10 @@
     padding: 0;
     border: none;
     background-color: transparent;
+    color: var(--font-tertiaryColor);
+}
+.carousel-btn:disabled {
+    color: #00000065;
 }
 
 @media (max-width: 1024px) {
@@ -61,13 +71,11 @@
     }
     .content-wrapper {
         width: 100%;
-        margin-right: 0rem;
+        margin-right: 0px;
+        bottom: 0;
+        border-radius: 0;
         padding: 2rem 1.5rem 1rem;
         display: block;
-    }
-    .carousel-paragraph {
-        font-size: 1.8rem;
-        margin-bottom: .5rem;
     }
 }
 @media (max-width: 767px) {
@@ -87,7 +95,7 @@
         height: 80vh;
     }
     .content-wrapper {
-        padding: 1rem 1.5rem 0rem;
+        padding: 1.5rem 1.5rem 0rem;
     }
     .carousel-paragraph {
         font-size: 1rem;
