@@ -1,5 +1,5 @@
 import { SectionWrapper } from '../../Components'
-import { HeaderSection, ServicesSection } from '../../Sections'
+import { HeaderSection, MainHeaderSec, ServicesSection } from '../../Sections'
 import './HomePage.css'
 
 
@@ -7,9 +7,11 @@ import './HomePage.css'
 const HomePage = () => {
     return (
         <div className='home-page'>
-            <SectionWrapper>
+            <MainHeaderSec />
+
+            {/* <SectionWrapper>
                 <HeaderSection />
-            </SectionWrapper>
+            </SectionWrapper> */}
 
             <SectionWrapper>
                 <ServicesSection />

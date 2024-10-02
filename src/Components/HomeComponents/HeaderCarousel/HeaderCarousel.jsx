@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import imgOne from '../../../Assets/2.jpg';
-import imgTwo from '../../../Assets/1.jpg';
-import imgThree from '../../../Assets/3.jpg';
+import imgOne from '../../../Assets/Images/2.jpg';
+import imgTwo from '../../../Assets/Images/1.jpg';
+import imgThree from '../../../Assets/Images/3.jpg';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import './HeaderCarousel.css';
 

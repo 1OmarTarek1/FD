@@ -1,26 +1,26 @@
 // BACKGROUND IMAGES
-import bgWater from '../Assets/water.jpg'
-import bgGas from '../Assets/gas.jpg'
-import bgFire from '../Assets/fire.jpg'
-import bgPlant from '../Assets/plant.jpg'
-import bgCable from '../Assets/cable.jpg'
-import bgCivil from '../Assets/civil.jpg'
+import bgWater from '../Assets/Images/water.jpg'
+import bgGas from '../Assets/Images/gas.jpg'
+import bgFire from '../Assets/Images/fire.jpg'
+import bgPlant from '../Assets/Images/plant.jpg'
+import bgCable from '../Assets/Images/cable.jpg'
+import bgCivil from '../Assets/Images/civil.jpg'
 
 // LINK IMAGES
-import waterSmall from '../Assets/waterSmall.jpg'
-import gasSmall from '../Assets/gasSmall.jpeg'
-import fireSmall from '../Assets/fireSmall.jpg'
-import plantSmall from '../Assets/plantSmall.jpg'
-import cableSmall from '../Assets/cableSmall.jpg'
-import civilSmall from '../Assets/civilSmall.jpg'
+import waterSmall from '../Assets/Images/waterSmall.jpg'
+import gasSmall from '../Assets/Images/gasSmall.jpeg'
+import fireSmall from '../Assets/Images/fireSmall.jpg'
+import plantSmall from '../Assets/Images/plantSmall.jpg'
+import cableSmall from '../Assets/Images/cableSmall.jpg'
+import civilSmall from '../Assets/Images/civilSmall.jpg'
 
 // ICONS
-import waterIcon from '../Assets/waterIcon.png'
-import gasIcon from '../Assets/gasIcon.png'
-import fireIcon from '../Assets/fireIcon.png'
-import plantIcon from '../Assets/plantIcon.png'
-import cableIcon from '../Assets/cableIcon.png'
-import civilIcon from '../Assets/civilIcon.png'
+import waterIcon from '../Assets/Images/waterIcon.png'
+import gasIcon from '../Assets/Images/gasIcon.png'
+import fireIcon from '../Assets/Images/fireIcon.png'
+import plantIcon from '../Assets/Images/plantIcon.png'
+import cableIcon from '../Assets/Images/cableIcon.png'
+import civilIcon from '../Assets/Images/civilIcon.png'
 
 
 
@@ -230,6 +230,37 @@ const ServicesData =  [
             },
         },
     },
+
+    
+    { // service-07
+        id        :  "service-07", 
+        image     :  civilSmall , 
+        icon      :  civilIcon,
+        txt       :  "Training engineering / Special processes", 
+        pagePath  :  "/ServicesPage",
+        serviceData: {
+            bgImg: bgCivil,
+            icon :  civilIcon,
+            title  : "Civil engineering / Special processes", 
+            subTitle  : "Lorem ipsum dolor sit amet. Harum nulla non corrupti id itaque aliquam illum cum quibusdam labore cumque.",  
+            paragraph  : para, 
+            points: {
+                point_1: "Dolor sit amet consectetur",
+                point_2: "Lorem ipsum, dolor sit amet",
+                point_3: "Similique ipsam provident quos",
+                point_4: "Consectetur adipisicing elit",
+                point_5: "Dolor sit amet consectetur",
+                point_6: "Lorem ipsum, dolor sit amet",
+                point_7: "Similique ipsam provident quos",
+                point_8: "Consectetur adipisicing elit",
+                point_9: "Dolor sit amet consectetur",
+                point_10: "Lorem ipsum, dolor sit amet",
+                point_11: "Similique ipsam provident quos",
+                point_12: "Consectetur adipisicing elit",
+            },
+        },
+    },
+    
 ]
 
 export default ServicesData

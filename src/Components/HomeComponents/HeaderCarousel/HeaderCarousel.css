@@ -29,11 +29,11 @@
     position: absolute;
     bottom: 20px;
     right: 0;
-    background-color: var(--bg-component); 
-    color: var(--font-tertiaryColor); 
-    /* background-color: #00000044; */
-    /* color: var(--font-mainColor); */
-    /* backdrop-filter: blur(8px); */
+    /* background-color: var(--bg-component);  */
+    /* color: var(--font-tertiaryColor);  */
+    background-color: #00000044;
+    color: var(--font-mainColor);
+    backdrop-filter: blur(8px);
     border: 1px solid #ffffff1f;
     border-radius: 5px;
     box-shadow: 0px 0px 7px 0px #0000006c;
@@ -57,10 +57,10 @@
     padding: 0;
     border: none;
     background-color: transparent;
-    color: var(--font-tertiaryColor);
+    color: var(--font-mainColor);
 }
 .carousel-btn:disabled {
-    color: #00000065;
+    color: #ffffff59;
 }
 
 @media (max-width: 1024px) {

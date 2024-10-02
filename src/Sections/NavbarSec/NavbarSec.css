@@ -17,15 +17,16 @@
 
 .the-nav {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
-    padding: 25px 25px;
+    padding: 0px 25px;
     background-color: var(--bg-body);
     transition: var(--transition-main);
 }
 .logo-wrapper{
+    flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 10px;
 }
@@ -71,7 +72,7 @@
 
 .link-wrapper {
     position: relative;
-    padding: 12px 15px;
+    padding: 30px 15px;
     overflow: hidden;
 }
 
@@ -92,6 +93,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    margin-left: 30px;
 }
 
 /* Start effect */
@@ -114,8 +116,10 @@
     .headroom--scrolled .the-nav:has(.webLinks.open){
         background-color: var(--bg-body);
     }
+    .the-nav{
+        padding-block: 15px;
+    }
     .webLinks {
-        padding-bottom: 10px;
         display: flex; 
         flex-direction: column; 
         gap: 0px;
@@ -123,7 +127,7 @@
         top: 100%; 
         left: 0;
         right: 0;
-        transform: translateY(calc( -100% - 90px ));
+        transform: translateY(calc( -100% - 100px ));
         z-index: -1;
         background: var(--bg-footer); 
         transition: var(--transition-main);
@@ -160,7 +164,7 @@
     }
 
     .btn-wrapper{
-        margin-top: 10px;
+        margin-left: 10px;
     }
 }
 
@@ -168,4 +172,38 @@
     .link-arrow{
         display: none;
     }
+}
+
+
+
+
+/*theme-btn*/
+.theme-btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgba(18, 24, 29, 0.425);
+    border: 1px solid #ffffff28;
+}
+.theme-icon{
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: var(--transition-main);
+}
+.moon{
+    /* opacity: 0; */
+    color: #fff;
+    filter: drop-shadow( 0px 0px 5px );
+}
+.sun{
+    font-size: 20px;
+    color: orange;
+    filter: drop-shadow( 0px 0px 5px yellow);
+    opacity: 0;
 }

@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import Headroom from 'react-headroom';
-import { NavMenuBtn, NestedMegaMenu, TertiaryBtn } from '../../Components';
-import logoImg from '../../Assets/logoNav.png';
-import { IoArrowForward } from "react-icons/io5";
+import { NavMenuBtn, NestedMegaMenu } from '../../Components';
+import logoImg from '../../Assets/Images/logoNav.png';
+import { IoArrowForward, IoMoon } from "react-icons/io5";
 import './NavbarSec.css';
-import { IoIosArrowForward } from 'react-icons/io';
+import { IoIosArrowForward, IoIosSunny } from 'react-icons/io';
 
 const NavbarSec = () => {
     const [isOpen, setIsOpen] = useState(false); 
@@ -73,11 +73,13 @@ const NavbarSec = () => {
                             </div>
                         </div>
                     </NavLink>
+
                     <NavMenuBtn 
                         isOpen={isOpen}
                         toggleMenu={toggleMenu}
                         iconRef={iconRef}
                     />
+
                     <ul className={`webLinks ${isOpen ? 'open' : ''}`} ref={menuRef}>
                         <NavLink to="/" className="web-link" onClick={closeMenu}>
                             <li className="link-wrapper">
@@ -126,10 +128,15 @@ const NavbarSec = () => {
                                 </span>
                             </li>
                         </NavLink>
-                        <div className="btn-wrapper">
-                            <TertiaryBtn>Send Message</TertiaryBtn>
-                        </div>
                     </ul>
+
+                    <div className="btn-wrapper">
+                        <div className="theme-btn">
+                            <span className="theme-icon moon"><IoMoon /></span>
+                            <span className="theme-icon sun"><IoIosSunny /></span>
+                            
+                        </div>
+                    </div>
                 </nav>
             </div>
         </Headroom>

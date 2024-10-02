@@ -95,3 +95,9 @@
         margin-bottom: 2rem;
     }
 }
+@media (max-width:567px) {
+    .service-page .service-title{
+        font-size: 2.5rem;
+        max-width: 450px;
+    }
+}

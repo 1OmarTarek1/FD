@@ -5,11 +5,14 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #ffffff28;
     cursor: pointer; 
     font-size: 24px; 
     transition: var(--transition-main);
+    background-color: transparent;
 }
 .icon-line{
     position: relative;
