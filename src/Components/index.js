@@ -5,10 +5,10 @@ export { default as SectionWrapper } from './SectionWrapper/SectionWrapper'
 export { default as NestedMegaMenu } from './NavbarComponents/NestedMegaMenu/NestedMegaMenu'
 
 // Home Page Components
-export { default as HeaderCarousel } from './HomeComponents/HeaderCarousel/HeaderCarousel'
 
 // Cards
 export { default as ServicesCard } from './Cards/ServicesCard/ServicesCard'
+export { default as NewsCard } from './Cards/NewsCard/NewsCard'
 
 
 // Buttons
@@ -26,3 +26,7 @@ export { default as ScrollToTop } from './ToTop-Reload/ScrollToTop'
 export { default as DynamicTitle } from './DynamicTitle/DynamicTitle'
 // Website Start Loading Animation
 export { default as Loading } from './Loading/Loading'
+
+
+export { default as ContactFormCom } from './ContactFormCom/ContactFormCom'
+export { default as OfficeLocationCom } from './OfficeLocationCom/OfficeLocationCom'

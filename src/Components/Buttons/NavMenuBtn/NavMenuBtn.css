@@ -1,4 +1,9 @@
-
+.btnTheme-wrapper{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 .menu-icon {
     display: flex; 
     flex-direction: column;
@@ -43,7 +48,7 @@
 
 
 @media (min-width: 992px) {
-    .menu-icon {
+    .btnTheme-wrapper {
         display: none; 
     }
 }

@@ -1,0 +1,6 @@
+.all-news{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    max-width: 860px;
+}

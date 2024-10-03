@@ -23,7 +23,7 @@ const AboutHeaderSec = () => {
                     than <font color="red">85 years</font> .
                 </h1>
         </div>
-    </div>
+        </div>
     )
 }
 

@@ -16,6 +16,7 @@
     --bg-component          : #fff;
     --bg-smallComponent     : transparent;
     --bg-footer             : #1a2331;
+    --bg-loading            :  radial-gradient(circle farthest-corner at center, #010a1a 0%, #0d192e 100%);
     --bg-scrolled           : #1a2331c4;
     --lier-fade             : linear-gradient(transparent, var(--bg-body));
     --lier-fadeRight        : linear-gradient(to right, var(--bg-body) 0%, rgba(255, 255, 255, 0) 40%);
@@ -31,6 +32,8 @@
     --font-navColor         : #fff;
     --font-navColorSec      : #fff ;
     --font-navColorThir     : #fff ;
+    --font-veryLightColor   : #777 ;
+    --font-iconTheme        : #fff ;
 
     /* ================================================== */
     /* ================================================== */
@@ -54,6 +57,7 @@
     --bg-component          : #fff;
     --bg-smallComponent     : #fff;
     --bg-footer             : #f2f2f2;
+    --bg-loading            :  background-image: radial-gradient(circle farthest-corner at center, #f0f4f8 0%, #ffffff 100%);    ;
     --bg-scrolled           : #ffffffea;
     --lier-fade             : unset;
     --lier-fadeRight        : unset;
@@ -69,6 +73,9 @@
     --font-navColor         : #010a1a;
     --font-navColorSec      : #010a1a ;
     --font-navColorThir     : #fff ;
+    --font-veryLightColor   : #999 ;
+    --font-iconTheme        : var(--color-primary) ;
+
 }
 
 
@@ -83,7 +90,7 @@
 
 
 ::-webkit-scrollbar        { width: 8px;                              }
-::-webkit-scrollbar-track  { background-color: var(--color-tertiary); }
+::-webkit-scrollbar-track  { background-color: var(--bg-footer); }
 ::-webkit-scrollbar-thumb  { background-color: var(--color-primary);  }
 ::-webkit-scrollbar-button { background-color: var(--color-primary);  }
 

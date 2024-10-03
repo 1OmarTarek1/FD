@@ -15,9 +15,9 @@ const AboutPage = () => {
                 <AboutTitlesSec />
                 <IdeaSec />
                 <OurStrategySec />
+                <LetterSec />
                 <WhyUsSec />
             </div>
-            <LetterSec />
         </div>
     )
 }

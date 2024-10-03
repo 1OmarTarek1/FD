@@ -3,7 +3,7 @@ import bgVideo from '../../../Assets/Videos/bgVid.mp4';
 import { FaWhatsapp } from 'react-icons/fa6';
 
 const MainHeaderSec = () => {
-    const phoneNumber = "+201150745430"; // Replace with your WhatsApp number
+    const phoneNumber = "+201153177510"; // Replace with your WhatsApp number
     const message = "Hello! I would like to contact you."; // Custom message
 
     // WhatsApp link format

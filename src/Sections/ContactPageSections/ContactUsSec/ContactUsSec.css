@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+
+
+
+
+
+@media ( max-width: 992px ) {
+    .contact-contentWrapper{
+        flex-direction: column-reverse;
+    }
+    .office-wrapper{
+        width: 100%;    
+    }
+    .contact-form {
+        width: 100%;
+    }
+}
