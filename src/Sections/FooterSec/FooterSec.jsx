@@ -7,7 +7,7 @@ import './FooterSec.css'
 const FooterSec = () => {
     return (
         <MDBFooter 
-            style={{backgroundColor:"#161d29"}}
+            style={{backgroundColor:"var(--bg-body)"}}
             className='text-center text-lg-start text-muted mt-5'
         >
             <section 
@@ -44,18 +44,21 @@ const FooterSec = () => {
             </section>
         
             <section className=''
-            style={{backgroundColor:"#161d29"}}
+            style={{backgroundColor:"var(--bg-body)"}}
             >
                 <MDBContainer className='text-center text-md-start mt-5'>
                     <MDBRow className='mt-3'>
                         <MDBCol md="4" lg="4" xl="3" className='mx-auto mb-4'>
-                            <h6 className='text-uppercase fw-bold mb-4'>
+                            <h6 className='text-uppercase fw-bold mb-4'
+                            style={{
+                                color:"var(--font-mainColor)"
+                            }}>
                                 <img 
                                 width={35} 
                                 src={logoImg} 
                                 alt="logo"
                                 style={{
-                                    marginRight:"10px"
+                                    marginRight:"10px",
                                 }}
                                 />
                                 First Distinctive
@@ -67,7 +70,10 @@ const FooterSec = () => {
                         </MDBCol>
             
                         <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
-                        <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
+                        <h6 className='text-uppercase fw-bold mb-4'
+                            style={{
+                                color:"var(--font-mainColor)"
+                            }}>Products</h6>
                         <p>
                             <a href='!##!' className='text-reset'>
                             Angular
@@ -91,7 +97,10 @@ const FooterSec = () => {
                         </MDBCol>
             
                         <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
-                        <h6 className='text-uppercase fw-bold mb-4'>links</h6>
+                        <h6 className='text-uppercase fw-bold mb-4'
+                            style={{
+                                color:"var(--font-mainColor)"
+                            }}>links</h6>
                         <p>
                             <a href='!##!' className='text-reset'>
                             Pricing
@@ -115,7 +124,11 @@ const FooterSec = () => {
                         </MDBCol>
             
                         <MDBCol md="4" lg="4" xl="3" className='mx-auto mb-md-0 mb-4'>
-                        <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
+                        <h6 className='text-uppercase fw-bold mb-4'
+                        style={{
+                            color:"var(--font-mainColor)"
+                        }}>
+                            Contact</h6>
                         <p>
                             <MDBIcon icon="home" className="me-2" />
                             New York, NY 10012, US

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import './ServicesCard.css';
 import { CirPrimaryBtn } from "../../../Components";
+import './ServicesCard.css';
 
 const ServicesCard = ({ id, image, icon, text, pagePath }) => {
     return (

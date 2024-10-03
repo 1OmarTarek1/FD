@@ -1,6 +1,6 @@
 .MainHeaderSec {
     position: relative;
-    height: calc(100vh);
+    height: calc(95vh);
     overflow: hidden;
     margin-bottom: 8rem;
 }
@@ -11,7 +11,7 @@
     left: 0;
     right: 0;
     height: 50%; 
-    background: linear-gradient(transparent, var(--bg-body));
+    background: var(--lier-fade);
     z-index: -1; 
 }
 
@@ -26,7 +26,7 @@
     z-index: -1; 
     transform: translate(-50%, -50%);
     object-fit: cover; 
-    opacity: 0.7; 
+    opacity: var(--lier-opacity); 
 }
 
 
@@ -55,9 +55,14 @@
 }
 
 .vid-btn {
-    width: 250px;
-    padding: 1rem 0rem;
-    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    width: 215px;
+    height: 65px;
+    padding-inline: 20px 25px;
+    background-color: transparent;
     border: 1px solid white;
     color: white;
     font-weight: 500;
@@ -65,8 +70,59 @@
     transition: all 0.3s ease ;
     text-transform: uppercase;
 }
-
+.vid-btn svg{
+    font-size: 2rem;
+}
 .vid-btn:hover {
     background-color: white;
     color: var(--color-primary);
+}
+
+
+
+.gas-price{
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 400px;
+    padding: 12px 35px;
+    background-color: var(--bg-smallComponent );
+    bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .vid-title {
+        width: 350px;
+    }
+    .vid-btn {
+        width: 200px;
+        height: 3.7rem;
+        font-size: 14px;
+    }
+}
+@media (max-width: 567px) {
+    .vid-title {
+        width: 250px;
+        font-size: 2rem;
+        margin-bottom: .5rem;
+    }
+    .vid-dis {
+        font-size: 1rem;
+    }
+    .vid-btn {
+        padding-inline: 20px 25px;
+        width: 180px;
+        height: 3.2rem;
+        font-size: 12px;
+    }
+    .vid-btn  svg{
+        font-size: 1.7rem;
+    }
+}
+@media (max-width: 467px) {
+    .gas-price{
+        width: 100%;
+        padding: 12px 25px;
+    }
 }

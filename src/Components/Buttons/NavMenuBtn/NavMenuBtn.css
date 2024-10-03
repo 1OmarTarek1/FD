@@ -12,7 +12,7 @@
     cursor: pointer; 
     font-size: 24px; 
     transition: var(--transition-main);
-    background-color: transparent;
+    background-color: rgba(18, 24, 29, 0.425);
 }
 .icon-line{
     position: relative;

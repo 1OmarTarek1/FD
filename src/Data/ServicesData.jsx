@@ -52,8 +52,8 @@ let para = <>
 
 const ServicesData =  [ 
 
-    { // service-01 
-        id        :  "service-01", 
+    { // Service-01 
+        id        :  "Service-01", 
         image     :  waterSmall, 
         icon      :  waterIcon,
         txt       :  "Water pipelines", 
@@ -82,8 +82,8 @@ const ServicesData =  [
     },
 
 
-    { // service-02 
-        id        :  "service-02", 
+    { // Service-02 
+        id        :  "Service-02", 
         image     :  gasSmall , 
         icon      :  gasIcon,
         txt       :  "Gas pipelines", 
@@ -112,8 +112,8 @@ const ServicesData =  [
     },
 
 
-    { // service-03 
-        id        :  "service-03", 
+    { // Service-03 
+        id        :  "Service-03", 
         image     :  fireSmall , 
         icon      :  fireIcon,
         txt       :  "Warmth pipelines", 
@@ -142,8 +142,8 @@ const ServicesData =  [
     },
 
 
-    { // service-04 
-        id        :  "service-04", 
+    { // Service-04 
+        id        :  "Service-04", 
         image     :  plantSmall , 
         icon      :  plantIcon,
         txt       :  "Plant construction", 
@@ -172,8 +172,8 @@ const ServicesData =  [
     },
 
 
-    { // service-05
-        id        :  "service-05", 
+    { // Service-05
+        id        :  "Service-05", 
         image     :  cableSmall , 
         icon      :  cableIcon,
         txt       :  "Cable constructions", 
@@ -202,8 +202,8 @@ const ServicesData =  [
     },
 
 
-    { // service-06
-        id        :  "service-06", 
+    { // Service-06
+        id        :  "Service-06", 
         image     :  civilSmall , 
         icon      :  civilIcon,
         txt       :  "Civil engineering / Special processes", 
@@ -232,8 +232,8 @@ const ServicesData =  [
     },
 
     
-    { // service-07
-        id        :  "service-07", 
+    { // Service-07
+        id        :  "Service-07", 
         image     :  civilSmall , 
         icon      :  civilIcon,
         txt       :  "Training engineering / Special processes", 
@@ -242,22 +242,22 @@ const ServicesData =  [
             bgImg: bgCivil,
             icon :  civilIcon,
             title  : "Civil engineering / Special processes", 
-            subTitle  : "Lorem ipsum dolor sit amet. Harum nulla non corrupti id itaque aliquam illum cum quibusdam labore cumque.",  
+            subTitle  : null ,  
             paragraph  : para, 
-            points: {
-                point_1: "Dolor sit amet consectetur",
-                point_2: "Lorem ipsum, dolor sit amet",
-                point_3: "Similique ipsam provident quos",
-                point_4: "Consectetur adipisicing elit",
-                point_5: "Dolor sit amet consectetur",
-                point_6: "Lorem ipsum, dolor sit amet",
-                point_7: "Similique ipsam provident quos",
-                point_8: "Consectetur adipisicing elit",
-                point_9: "Dolor sit amet consectetur",
-                point_10: "Lorem ipsum, dolor sit amet",
-                point_11: "Similique ipsam provident quos",
-                point_12: "Consectetur adipisicing elit",
-            },
+            // points: {
+                // point_1: "Dolor sit amet consectetur",
+                // point_2: "Lorem ipsum, dolor sit amet",
+                // point_3: "Similique ipsam provident quos",
+                // point_4: "Consectetur adipisicing elit",
+                // point_5: "Dolor sit amet consectetur",
+                // point_6: "Lorem ipsum, dolor sit amet",
+                // point_7: "Similique ipsam provident quos",
+                // point_8: "Consectetur adipisicing elit",
+                // point_9: "Dolor sit amet consectetur",
+                // point_10: "Lorem ipsum, dolor sit amet",
+                // point_11: "Similique ipsam provident quos",
+                // point_12: "Consectetur adipisicing elit",
+            // },
         },
     },
     

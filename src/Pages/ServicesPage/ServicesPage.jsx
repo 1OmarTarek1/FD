@@ -3,8 +3,8 @@ import ServicesData from '../../Data/ServicesData';
 import './ServicesPage.css';
 
 const ServicesPage = () => {
-    const { serviceId } = useParams();
-    const service = ServicesData.find(item => item.id === serviceId);
+    const { ServiceId } = useParams();
+    const service = ServicesData.find(item => item.id === ServiceId);
 
     if (!service) {
         return <div>Service not found</div>;
@@ -38,23 +38,29 @@ const ServicesPage = () => {
             data-aos="fade-up"
             data-aos-duration="1500"
             >
-                <h2 className='service-subTitle'>
-                    {service.serviceData.subTitle}
-                </h2>
+                {service.serviceData.subTitle && (
+                    <h2 className='service-subTitle'>
+                        {service.serviceData.subTitle}
+                    </h2>
+                )}
                 <div className="para-container">
                     <p className='service-paragraph'>
                         {service.serviceData.paragraph}
                     </p>
                     <ul className='all-points'>
-                        {Object.values(service.serviceData.points).map((point, index) => (
-                            <li 
-                            key={index}
-                            className='point'
-                            >
-                                <div className='point-icon'></div>
-                                {point}
-                            </li>
-                        ))}
+                        {service.serviceData.points && (
+                            Object.values(service.serviceData.points).map((point, index) => (
+                                <li 
+                                    key={index}
+                                    className='point'
+                                    data-aos="fade-right"
+                                    data-aos-delay={`${index}00`}
+                                >
+                                    <div className='point-icon'></div>
+                                    {point}
+                                </li>
+                            ))
+                        )}
                     </ul>
                 </div>
             </div>

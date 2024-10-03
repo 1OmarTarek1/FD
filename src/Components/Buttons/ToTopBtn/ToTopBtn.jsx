@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { FaArrowUp } from 'react-icons/fa';
+import { IoArrowUp } from "react-icons/io5";
 import './ToTopBtn.css'
 
 
@@ -23,7 +23,14 @@ const ToTopBtn = () => {
             className  =  'arrow-btn' 
             onClick    =  {scrollToTop} 
             style      =  {{bottom: visible ? '3%' : '-50px'}}>
-                <FaArrowUp />
+                <div className="lines-wrapper">
+                    <span className="line line-1">
+                        <IoArrowUp />
+                    </span>
+                    <span className="line line-2">
+                        <IoArrowUp />
+                    </span>
+                </div>
             </button>
         </>
     )

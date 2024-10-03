@@ -19,5 +19,10 @@ export { default as SecondaryBtn } from './Buttons/SecondaryBtn/SecondaryBtn'
 export { default as TertiaryBtn } from './Buttons/TertiaryBtn/TertiaryBtn'
 export { default as CirPrimaryBtn } from './Buttons/CirPrimaryBtn/CirPrimaryBtn'
 
+
 // When Reload Scroll will be to ( 0 ).
 export { default as ScrollToTop } from './ToTop-Reload/ScrollToTop'
+// Dynamic Title
+export { default as DynamicTitle } from './DynamicTitle/DynamicTitle'
+// Website Start Loading Animation
+export { default as Loading } from './Loading/Loading'

@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import Headroom from 'react-headroom';
-import { NavMenuBtn, NestedMegaMenu } from '../../Components';
+import { NavMenuBtn, NestedMegaMenu, ThemeBtn } from '../../Components';
 import logoImg from '../../Assets/Images/logoNav.png';
-import { IoArrowForward, IoMoon } from "react-icons/io5";
+import { IoArrowForward } from "react-icons/io5";
+import { IoIosArrowForward } from 'react-icons/io';
 import './NavbarSec.css';
-import { IoIosArrowForward, IoIosSunny } from 'react-icons/io';
 
 const NavbarSec = () => {
     const [isOpen, setIsOpen] = useState(false); 
@@ -104,7 +104,7 @@ const NavbarSec = () => {
                                 setIsOpen={setIsOpen}
                             />
                         </div>
-                        <NavLink to="/projects" className="web-link" onClick={closeMenu}>
+                        <NavLink to="/Projects" className="web-link" onClick={closeMenu}>
                             <li className="link-wrapper">
                                 Projects
                                 <span className='link-arrow'>
@@ -112,7 +112,7 @@ const NavbarSec = () => {
                                 </span>
                             </li>
                         </NavLink>
-                        <NavLink to="/about" className="web-link" onClick={closeMenu}>
+                        <NavLink to="/About" className="web-link" onClick={closeMenu}>
                             <li className="link-wrapper">
                                 About Us
                                 <span className='link-arrow'>
@@ -120,7 +120,7 @@ const NavbarSec = () => {
                                 </span>
                             </li>
                         </NavLink>
-                        <NavLink to="/contact" className="web-link" onClick={closeMenu}>
+                        <NavLink to="/Contact" className="web-link" onClick={closeMenu}>
                             <li className="link-wrapper">
                                 Contact Us
                                 <span className='link-arrow'>
@@ -131,11 +131,7 @@ const NavbarSec = () => {
                     </ul>
 
                     <div className="btn-wrapper">
-                        <div className="theme-btn">
-                            <span className="theme-icon moon"><IoMoon /></span>
-                            <span className="theme-icon sun"><IoIosSunny /></span>
-                            
-                        </div>
+                        <ThemeBtn />
                     </div>
                 </nav>
             </div>

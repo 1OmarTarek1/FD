@@ -17,7 +17,7 @@
     border-radius: 50%;
     display: grid;
     place-content: center;
-    color: var(--font-mainColor);
+    color: #fff;
     font-size: 17px;
     transition: var(--transition-animation);
 }

@@ -1,11 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
-import { HomePage, ServicesPage } from '../../Pages';
+import { AboutPage, ContactPage, HomePage, ProjectsPage, ServicesPage } from '../../Pages';
 
 const WebRoutes = () => {
     return (
         <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/services/:serviceId" element={<ServicesPage />} />
+            <Route path="/Services/:ServiceId" element={<ServicesPage />} />
+            <Route path="/Projects" element={<ProjectsPage />} />
+            <Route path="/About" element={<AboutPage />} />
+            <Route path="/Contact" element={<ContactPage />} />
         </Routes>
     );
 };

@@ -1,0 +1,21 @@
+.aboutUs-Sec{
+    padding: 25px;
+}
+.aboutUs-Sec .aboutUs-title{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 2.3rem;
+    font-weight: 600;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.about-subTitle{
+    font-size: 18px;
+    color: var(--font-secondaryColor);
+    max-width: 90%;
+    margin-bottom: 5rem;
+}
+.ideaItem-para{
+    color: var(--font-secondaryColor);
+}

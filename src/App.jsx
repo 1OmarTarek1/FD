@@ -1,11 +1,12 @@
-import { useEffect } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import { NavbarSec, FooterSec } from './Sections';
-import { ScrollToTop, ToTopBtn, WebRoutes } from './Components';
+import { DynamicTitle, ScrollToTop, ToTopBtn, WebRoutes, Loading } from './Components';
 import './App.css';
 
 const App = () => {
+    const [isLoading, setIsLoading] = useState(true);
+
     useEffect(() => {
         AOS.init({
             duration: 800,
@@ -13,17 +14,27 @@ const App = () => {
     }, []);
 
     return (
-        <Router basename='FD'>
-            <div className="MAIN-WRAPPER">
-                <NavbarSec />
-                <div className="App">
-                        <WebRoutes />
-                    <FooterSec />
-                    <ToTopBtn />
-                </div>      
-            </div>
-            <ScrollToTop />
-        </Router>
+        <>
+            {isLoading ? (
+                <Loading
+                    isLoading={isLoading}
+                    setIsLoading={setIsLoading}
+                />
+            ) : (
+                <>                
+                    <div className="MAIN-WRAPPER">
+                        <NavbarSec />
+                        <div className="App">
+                            <WebRoutes />
+                            <FooterSec />
+                            <ToTopBtn />
+                        </div>
+                    </div>
+                    <ScrollToTop />
+                    <DynamicTitle />
+                </>
+            )}
+        </>
     );
 }
 

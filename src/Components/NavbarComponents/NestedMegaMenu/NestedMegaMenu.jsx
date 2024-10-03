@@ -30,7 +30,7 @@ const NestedMegaMenu = ({ isMegaMenuOpen, setIsOpen }) => {
         <ul ref={menuRef} className={`nested-megaMenu ${isMegaMenuOpen ? 'opened' : ''}`}>
             {ServicesData.map(({ id, icon, txt }) => (
                 <li key={id} className="mega-item">
-                    <NavLink to={`/services/${id}`} className="mega-link" onClick={()=>{setIsOpen(false)}}>
+                    <NavLink to={`/Services/${id}`} className="mega-link" onClick={()=>{setIsOpen(false)}}>
                         <div className="item-content">
                             <img src={icon} alt={txt} className="item-icon" />
                             <div className="item-text">{txt}</div>

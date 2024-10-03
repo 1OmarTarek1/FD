@@ -10,17 +10,27 @@
 
     /* Background Colors */
     --bg-body               : #010a1a;
-    --bg-nav                : var(--color-black);
+    --bg-nav                : var(--bg-body);
     --bg-container          : var(--glassBG-light);
     --bg-section            : #1A1A1A;
     --bg-component          : #fff;
+    --bg-smallComponent     : transparent;
     --bg-footer             : #1a2331;
+    --bg-scrolled           : #1a2331c4;
+    --lier-fade             : linear-gradient(transparent, var(--bg-body));
+    --lier-fadeRight        : linear-gradient(to right, var(--bg-body) 0%, rgba(255, 255, 255, 0) 40%);
+    --lier-opacity          : .8;
+
+    /*border color*/
+    --lightBorder-color     : #ffffff31;
 
     /* Font Colors */
     --font-mainColor        : #FFF;
     --font-secondaryColor   : #80858d;
     --font-tertiaryColor    : #010a1a;
     --font-navColor         : #fff;
+    --font-navColorSec      : #fff ;
+    --font-navColorThir     : #fff ;
 
     /* ================================================== */
     /* ================================================== */
@@ -37,18 +47,28 @@
 [data-theme='light'] {
 
     /* Background Colors */
-    --bg-body               : #010a1a;
-    --bg-nav                : var(--color-black);
+    --bg-body               : #fff;
+    --bg-nav                : var(--bg-body);
     --bg-container          : var(--glassBG-light);
     --bg-section            : #1A1A1A;
-    --bg-component          : #27292a;
-    --bg-footer             : #1a2331;
+    --bg-component          : #fff;
+    --bg-smallComponent     : #fff;
+    --bg-footer             : #f2f2f2;
+    --bg-scrolled           : #ffffffea;
+    --lier-fade             : unset;
+    --lier-fadeRight        : unset;
+    --lier-opacity          : 1;
 
+    /*border color*/
+    --lightBorder-color     : #00000021;
 
     /* Font Colors */
-    --font-mainColor        : #000000;
-    --font-secondaryColor   : #333333;
-    --font-navColor         : #fff;
+    --font-mainColor        : #010a1a;
+    --font-secondaryColor   : #616060;
+    --font-tertiaryColor    : #fff;
+    --font-navColor         : #010a1a;
+    --font-navColorSec      : #010a1a ;
+    --font-navColorThir     : #fff ;
 }
 
 

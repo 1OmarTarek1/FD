@@ -1,5 +1,5 @@
 .headroom--scrolled .the-nav{
-    background-color: #1a2331c4;
+    background-color: var(--bg-scrolled);
     transition: var(--transition-main);
 }
 .headroom--scrolled 
@@ -20,8 +20,10 @@
     /* justify-content: space-between; */
     align-items: center;
     padding: 0px 25px;
-    background-color: var(--bg-body);
+    background-color: var(--bg-nav);
     transition: var(--transition-main);
+    border-bottom: 1px solid #ffffff27;
+    box-shadow: 0px 0px 5px 0px #00000070;
 }
 .logo-wrapper{
     flex: 1;
@@ -51,6 +53,7 @@
     background-color: #fff;
     padding: 5px;
     border-radius: 5px;
+    border: 1px solid #010a1a28;
 }
 
 .logo-img {
@@ -131,10 +134,12 @@
         z-index: -1;
         background: var(--bg-footer); 
         transition: var(--transition-main);
+        pointer-events: none;
     }
     
     .webLinks.open {
         transform: translateY(0%);
+        pointer-events: auto;
     }
     .link-wrapper {
         display: flex;
@@ -142,7 +147,7 @@
         align-items: center;
         position: relative;
         padding: 13px 25px;
-        border-bottom: 1px solid var(--bg-body);
+        border-bottom: 1px solid var(--lightBorder-color);
     }
     .link-arrow{
         width: 40px;
@@ -162,7 +167,7 @@
     .web-link {
         font-size: 18px;
     }
-
+    
     .btn-wrapper{
         margin-left: 10px;
     }
@@ -174,36 +179,29 @@
     }
 }
 
+@media (max-width: 567px) {
+    .the-nav {
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: center;
+        padding-inline: 15px;
+    }
+    .logo-wrapper{
+        gap: 8px;
+    }
+    .company-name{
+        line-height: 1.1;
+    }
+    .name{
+        font-size: 18px;
+    }
+    .description{
+        font-size: 10px;
+    }
+    .logo-img {
+        width: 40px;
+    }
+}
 
 
 
-/*theme-btn*/
-.theme-btn{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: rgba(18, 24, 29, 0.425);
-    border: 1px solid #ffffff28;
-}
-.theme-icon{
-    position: absolute;
-    top: 48%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: var(--transition-main);
-}
-.moon{
-    /* opacity: 0; */
-    color: #fff;
-    filter: drop-shadow( 0px 0px 5px );
-}
-.sun{
-    font-size: 20px;
-    color: orange;
-    filter: drop-shadow( 0px 0px 5px yellow);
-    opacity: 0;
-}

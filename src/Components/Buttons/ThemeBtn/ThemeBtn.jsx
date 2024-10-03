@@ -1,22 +1,18 @@
 import React from 'react';
 import { useTheme } from '../../Providers/ThemeProvider/ThemeProvider';
+import { IoMoon } from "react-icons/io5";
+import { IoIosSunny } from 'react-icons/io';
 import './ThemeBtn.css';
 
-const ThemeBtn = ({ btnID }) => {
+const ThemeBtn = () => {
     const { theme, toggleTheme } = useTheme(); // Get theme and toggleTheme function from context
 
     return (
-        <label className="switch">
-            <input
-                type="checkbox"
-                id={btnID}
-                checked={theme === 'light'} // Reflect current theme state
-                onChange={toggleTheme} // Toggle theme on change
-            />
-            <span className="slider round"></span>
-        </label>
+        <div className={`theme-btn ${theme === 'dark' && 'darkActive'}`}  onClick={toggleTheme}>
+            <span className="theme-icon moon"><IoMoon /></span>
+            <span className="theme-icon sun"><IoIosSunny /></span>
+        </div>
     );
 };
 
 export default ThemeBtn;
-

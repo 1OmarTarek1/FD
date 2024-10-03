@@ -2,6 +2,7 @@
     position: relative;
     height: 63vh;
     overflow: hidden;
+    margin-bottom: 4rem;
 }
 .service-page .lierEffectImg {
     position: absolute;
@@ -9,7 +10,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, var(--bg-body) 0%, rgba(255, 255, 255, 0) 40%);
+    background: var(--lier-fadeRight);
 }
 .service-page .service-bgImg {
     width: 100%;
@@ -28,6 +29,7 @@
 }
 
 .service-page .service-title{
+    color: #fff;
     font-size: 3.5rem;
     font-weight: 600;
     max-width: 500px;
@@ -49,7 +51,7 @@
     margin: auto;
 }
 .service-page .service-paragraph{
-    margin-bottom: 2.5rem;
+    margin-bottom: 6rem;
     font-size: 1.5rem;
     color: var(--font-secondaryColor);
 }
@@ -80,7 +82,7 @@
 }
 @media (max-width:767px) {
     .service-page .lierEffectImg {
-        background: linear-gradient(to right, var(--bg-body) 0%, rgba(255, 255, 255, 0) 70%);
+        background: linear-gradient(to right, var(--lier-fade) 0%, rgba(255, 255, 255, 0) 70%);
     }
     .service-page .para-container{
         max-width: 100%;

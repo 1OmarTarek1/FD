@@ -1,0 +1,79 @@
+.letterSec-title{
+    margin: 70px 25px;
+}
+.noteImg{
+    width: 70px;
+    margin-bottom: 3rem;
+}
+
+.the-letter {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    background-color: var(--bg-footer);
+    padding: 65px;
+    border-radius: 10px; 
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2), 
+                0 10px 20px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.3s ease; 
+    overflow: hidden;
+}
+
+.the-letter:hover {
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25), 
+                0 15px 30px rgba(0, 0, 0, 0.15); 
+}
+
+.the-letter .letter-title{
+    font-size: 1.6rem ;
+    display: block;
+    font-weight: 600;
+    padding: 10px;
+    color: var(--font-mainColor);
+}
+.the-letter .letterWords{
+    color: var(--font-secondaryColor);
+    font-style: italic;
+    line-height: 1.8rem;
+    font-weight: 300;
+    font-size: 17px;
+}
+.the-letter .letterWords b{
+    color: var(--font-mainColor);
+    font-weight: 600;
+}
+
+@media (max-width:992px) {
+    .the-letter {
+        max-width: 700px;
+        margin: auto;
+        padding: 45px;
+    }
+    .the-letter .letter-title{
+        font-size: 1.2rem ;
+    }
+    .the-letter .letterWords{
+        line-height: 1.6rem;
+        font-size: 14px;
+    }
+}
+
+
+
+@media (max-width:767px) {
+    .noteImg{
+        width: 40px;
+        margin-bottom: 2rem;
+    }
+    .the-letter {
+        max-width: 95%;
+        padding: 35px;
+    }
+    .the-letter .letter-title{
+        font-size: 1rem ;
+    }
+    .the-letter .letterWords{
+        line-height: 1.4rem;
+        font-size: 13px;
+    }
+}
