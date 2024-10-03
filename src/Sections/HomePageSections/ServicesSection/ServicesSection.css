@@ -4,12 +4,10 @@
     margin-bottom: 3rem;
 }
 .all-servicesCard{
+    padding: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 1px;
-    border-top: 1px solid #1c182e;
-    border-bottom: 1px solid #1c182e;
-    background-color: #1c182e;
 }

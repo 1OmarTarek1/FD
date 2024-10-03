@@ -7,12 +7,13 @@ import bgCable from '../Assets/Images/cable.jpg'
 import bgCivil from '../Assets/Images/civil.jpg'
 
 // LINK IMAGES
-import waterSmall from '../Assets/Images/waterSmall.jpg'
-import gasSmall from '../Assets/Images/gasSmall.jpeg'
-import fireSmall from '../Assets/Images/fireSmall.jpg'
-import plantSmall from '../Assets/Images/plantSmall.jpg'
-import cableSmall from '../Assets/Images/cableSmall.jpg'
-import civilSmall from '../Assets/Images/civilSmall.jpg'
+import waterSmall from '../Assets/Images/projects/project-01.jpg'
+import gasSmall from '../Assets/Images/projects/project-02.jpg'
+import fireSmall from '../Assets/Images/projects/project-03.jpg'
+import plantSmall from '../Assets/Images/projects/project-04.jpg'
+import cableSmall from '../Assets/Images/projects/project-05.jpg'
+import civilSmall from '../Assets/Images/projects/project-01.jpg'
+import training from '../Assets/Images/projects/project-03.jpg'
 
 // ICONS
 import waterIcon from '../Assets/Images/waterIcon.png'
@@ -234,7 +235,7 @@ const ServicesData =  [
     
     { // Service-07
         id        :  "Service-07", 
-        image     :  civilSmall , 
+        image     :  training , 
         icon      :  civilIcon,
         txt       :  "Training engineering / Special processes", 
         pagePath  :  "/ServicesPage",

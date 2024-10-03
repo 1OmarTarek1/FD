@@ -1,6 +1,6 @@
-import './MainHeaderSec.css';
 import bgVideo from '../../../Assets/Videos/bgVid.mp4';
 import { FaWhatsapp } from 'react-icons/fa6';
+import './MainHeaderSec.css';
 
 const MainHeaderSec = () => {
     const phoneNumber = "+201153177510"; // Replace with your WhatsApp number
@@ -31,19 +31,12 @@ const MainHeaderSec = () => {
                 >
                     Oil & Gas Services
                 </div>
-                <div className=""
-                    data-aos={"fade-up"}
-                    data-aos-duration={"400"}
-                    data-aos-delay={"500"}
-                >
-                    <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                        <button className="vid-btn" >
-                            <FaWhatsapp />
-                            Send Message
-                        </button>
-                    </a>
-                </div>
             </div>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                <button className="vid-btn" >
+                    <FaWhatsapp />
+                </button>
+            </a>
             <div className="gas-price">
                 <div className="price">
                     <div style={{
