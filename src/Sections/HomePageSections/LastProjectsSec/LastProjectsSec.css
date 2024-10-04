@@ -2,8 +2,16 @@
     padding: 25px;
 }
 .LastProjectsSec-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
     margin-bottom: 5rem;
     text-align: center ;
+}
+.LastProjectsSec-title svg{
+    position: relative;
+    top: -2px;
 }
 .allLast-projects{
     display: flex;

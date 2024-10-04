@@ -1,13 +1,58 @@
-.gas-price{
+
+
+
+
+.gas-price {
     position: absolute;
     display: flex;
-    align-items: flex-end;
+    align-items: center; 
     justify-content: space-between;
     width: 400px;
-    padding: 12px 35px;
+    padding: 12px 20px;
     background-color: var(--bg-smallComponent );
     bottom: 0;
 }
+
+/* .price {
+} */
+
+.price-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2rem; 
+}
+
+.price-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.price-value {
+    text-align: center;
+    display: flex;
+    gap: 10px; /* Space between items */
+}
+
+.value {
+    width: 100%;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--font-mainColor); 
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.3;
+    font-weight: 300;
+    font-size: 13px;
+    color: var(--font-mainColor); 
+}
+
 
 @media (max-width: 467px) {
     .gas-price{

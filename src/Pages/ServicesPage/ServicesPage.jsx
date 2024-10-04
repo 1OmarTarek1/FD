@@ -1,10 +1,40 @@
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import ServicesData from '../../Data/ServicesData';
 import './ServicesPage.css';
 
 const ServicesPage = () => {
     const { ServiceId } = useParams();
-    const service = ServicesData.find(item => item.id === ServiceId);
+    const [service, setService] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchServiceData = async () => {
+            try {
+                const response = await fetch('http://127.0.0.1:8000/AllServices/');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch data');
+                }
+                const data = await response.json();
+                const foundService = data.find(item => item.id.toString() === ServiceId);
+                setService(foundService);
+            } catch (err) {
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchServiceData();
+    }, [ServiceId]);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
 
     if (!service) {
         return <div>Service not found</div>;
@@ -14,7 +44,7 @@ const ServicesPage = () => {
         <div className='service-page'>
             <div className="service-header">
                 <img 
-                    src={service.serviceData.bgImg} 
+                    src={service.bgImg} 
                     alt={service.serviceData.title} 
                     className="service-bgImg" 
                 />
@@ -23,11 +53,6 @@ const ServicesPage = () => {
                 data-aos={"fade-up"}
                 data-aos-duration="600"
                 >
-                    <img 
-                        src={service.serviceData.icon} 
-                        className="service-icon" 
-                        alt={service.serviceData.title} 
-                    />
                     <h1 className='service-title'>
                         {service.serviceData.title}
                     </h1>

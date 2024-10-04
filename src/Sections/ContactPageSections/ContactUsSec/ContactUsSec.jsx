@@ -5,9 +5,9 @@ const ContactUsSec = () => {
     return (
         <>
             <div className="form-wrapper" >
-                <h1 className="text-center mb-5" data-aos={"fade-up"}>
+                {/* <h1 className="text-center mb-5" data-aos={"fade-up"}>
                     Contact Us
-                </h1>
+                </h1> */}
 
                 <div className="contact-contentWrapper">
                     <ContactFormCom />

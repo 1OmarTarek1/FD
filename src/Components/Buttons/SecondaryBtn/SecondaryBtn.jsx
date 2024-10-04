@@ -18,7 +18,7 @@ const SecondaryBtn = (props) => {
                     <IoArrowForward />
                 </span>
             </div>
-            <span style={{marginLeft:"15px"}}>
+            <span style={{marginLeft:"15px", transition:"all .3s ease"}}>
                 {props.children}
             </span>
         </Link>

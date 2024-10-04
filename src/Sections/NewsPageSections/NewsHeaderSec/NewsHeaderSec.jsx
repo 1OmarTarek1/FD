@@ -1,98 +1,84 @@
 import React, { useState, useEffect, useRef } from 'react';
-import imgOne from '../../../Assets/Images/2.jpg';
-import imgTwo from '../../../Assets/Images/1.jpg';
-import imgThree from '../../../Assets/Images/3.jpg';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import './NewsHeaderSec.css';
 
-const carouselData = [
-    {
-        image: imgOne,
-        text: <>
-            Lorem ipsum dolor sit amet elit.  Alias odit est eaque labore.
-            <font color="red"> Lorem ipsum dolor sit amet elit Alias.</font>
-        </>
-    },
-    {
-        image: imgTwo,
-        text: <>
-            Vivamus laoreet <font color="red"> Nullam tincidunt adipiscing enim.</font> 
-            Vivamus laoreet. Nullam tincidunt adipiscing enim.
-        </>
-    },
-    {
-        image: imgThree,
-        text: <>
-            Quisque volutpat condimentum velit. 
-            <font color="red"> Class aptent taciti.</font> Quisque volutpat condimentum velit.
-        </>
-    }
-];
-
 const NewsHeaderSec = () => {
-    const [currentIndex, setCurrentIndex] = useState(0); // Start from 0 for direct indexing
+    const [currentIndex, setCurrentIndex] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
-    const [fadeOut, setFadeOut] = useState(false); // For paragraph fade-out effect
+    const [fadeOut, setFadeOut] = useState(false);
+    const [carouselData, setCarouselData] = useState([]); // Initialize carouselData
     const totalSlides = carouselData.length;
     
     const carouselRef = useRef(null);
 
-    // Handle next slide
+    // Fetch news data from server
+    useEffect(() => {
+        const fetchNewsData = async () => {
+            try {
+                const response = await fetch('http://127.0.0.1:8000/AllNews/');
+                const data = await response.json();
+                
+                // Filter for important news
+                const importantNews = data.filter(news => news.important);
+                setCarouselData(importantNews);
+            } catch (error) {
+                console.error('Error fetching news:', error);
+            }
+        };
+
+        fetchNewsData();
+    }, []);
+
     const handleNext = () => {
         if (isTransitioning || currentIndex === totalSlides - 1) return; // Stop at last image
         setIsTransitioning(true);
         triggerFadeOut();
         setTimeout(() => {
             setCurrentIndex((prevIndex) => prevIndex + 1);
-            setIsTransitioning(false); // Reset transitioning state
-        }, 300); // Delay before switching to next slide
+            setIsTransitioning(false);
+        }, 300);
     };
 
-    // Handle previous slide
     const handlePrev = () => {
         if (isTransitioning || currentIndex === 0) return; // Stop at first image
         setIsTransitioning(true);
         triggerFadeOut();
         setTimeout(() => {
             setCurrentIndex((prevIndex) => prevIndex - 1);
-            setIsTransitioning(false); // Reset transitioning state
-        }, 300); // Delay before switching to previous slide
+            setIsTransitioning(false);
+        }, 300);
     };
 
-    // Trigger carousel transition when currentIndex changes
     useEffect(() => {
         if (carouselRef.current) {
             carouselRef.current.style.transition = "transform 0.5s ease-in-out";
             carouselRef.current.style.transform = `translateX(-${currentIndex * 100}%)`;
-            triggerFadeIn(); // Trigger the fade-in effect after transition
+            triggerFadeIn();
         }
     }, [currentIndex]);
 
-    // Trigger fade-out for the paragraph
     const triggerFadeOut = () => {
         setFadeOut(true);
         setTimeout(() => {
-            setFadeOut(false); // Reset fade-out after the effect
-        }, 250); // Match with the CSS animation duration
+            setFadeOut(false);
+        }, 250);
     };
 
-    // Trigger fade-in for the paragraph after text is updated
     const triggerFadeIn = () => {
         setTimeout(() => {
-            setFadeOut(false); // Make sure fade-out is over before fading in
-        }, 250); // Adjust to allow fade-in after transition
+            setFadeOut(false);
+        }, 250);
     };
 
     return (
         <div className="imgCarouselWrapper">
             <div className="imgCarousel" ref={carouselRef}>
                 {carouselData.map((item, index) => (
-                    <img
-                        key={index}
-                        className="imgCarouselImage"
-                        src={item.image}
-                        alt={`carousel-${index}`}
-                    />
+                    <div key={index} 
+                         className="carouselSlide" 
+                         style={{ backgroundImage: `url(${item.image})` }}>
+                        {/* Remove the <img> tag, just use background */}
+                    </div>
                 ))}
             </div>
             <div 
@@ -101,7 +87,7 @@ const NewsHeaderSec = () => {
                 data-aos-duration="500"
             >
                 <p className={`carousel-paragraph ${fadeOut ? 'fade' : ''}`}>
-                    {carouselData[currentIndex].text}
+                    {carouselData[currentIndex] && carouselData[currentIndex].title}
                 </p>
                 <div className="carousel-buttons">
                     <button className="carousel-btn btn-right" onClick={handlePrev} disabled={currentIndex === 0}>
@@ -117,8 +103,3 @@ const NewsHeaderSec = () => {
 };
 
 export default NewsHeaderSec;
-
-
-
-
-

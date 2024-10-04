@@ -16,10 +16,6 @@ const ProjectCard = ({ id, projectImg, projectTitle, date, client }) => {
                 <div className="info-text date-text">Completion:</div>
                 <span className="info date">{date}</span>
             </div>
-            <div className="info-wrapper">
-                <div className="info-text client-text">Client:</div>
-                <span className="info client">{client}</span>
-            </div>
         </li>
     );
 }

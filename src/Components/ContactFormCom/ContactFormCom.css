@@ -45,6 +45,10 @@
 .form-group textarea::placeholder {
     color: var(--font-secondaryColor);
 }
+.form-group input:focus,
+.form-group textarea:focus {
+    color: var(--font-MainColor);
+}
 
 .form-group input:focus,
 .form-group textarea:focus {

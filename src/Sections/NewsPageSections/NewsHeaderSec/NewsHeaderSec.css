@@ -1,7 +1,8 @@
 .imgCarouselWrapper {
     position: relative;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 63vh;
     overflow: hidden;
@@ -11,28 +12,29 @@
 .imgCarousel {
     display: flex;
     width: 100%; 
+    height: 100%;
     transition: transform 0.5s ease-in-out;
 }
 
-.imgCarouselImage {
-    min-width: 100%; 
+.carouselSlide {
+    min-width: 100%;
     height: 100%; 
-    background-size: cover; 
-    background-position: center; 
-    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
 }
 
 .content-wrapper {
     justify-content: space-between;
     width: 100%;   
     padding: 3rem 3.25rem 2rem 3rem;
-    display: block;
     position: absolute;
     bottom: 20px;
     right: 0;
-    background-color: #00000065;
+    background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
-    border: 1px solid #ffffff1f;
+    border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .carousel-paragraph {
@@ -54,50 +56,49 @@
     border: none;
     background-color: transparent;
     color: #fff;
+    cursor: pointer;
 }
+
 .carousel-btn:disabled {
-    color: #ffffff59;
+    color: rgba(255, 255, 255, 0.35);
+    cursor: not-allowed;
 }
-
-
-
 
 @media (max-width: 1024px) {
     .imgCarouselWrapper {
-        flex-direction: column;
-        justify-content: flex-start;
-        width: 100%;
+        height: 55vh;
     }
+
     .content-wrapper {
         width: 100%;
-        margin-right: 0px;
         bottom: 0;
         border-radius: 0;
         padding: 2rem 1.5rem 1rem;
-        display: block;
     }
 }
+
 @media (max-width: 767px) {
     .imgCarousel {
         height: 80vh;
     }
+
+    .imgCarouselWrapper {
+        height: 45vh;
+    }
+
     .carousel-paragraph {
         font-size: 1.3rem;
-        line-height: 1.25;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
     }
-    
 }
+
 @media (max-width: 560px) {
 
-    .imgCarousel {
-        height: 80vh;
-    }
     .content-wrapper {
-        padding: 1.5rem 1.5rem 0rem;
+        padding: 1.5rem 1.5rem 0;
     }
+
     .carousel-paragraph {
         font-size: 1rem;
     }
-    
 }

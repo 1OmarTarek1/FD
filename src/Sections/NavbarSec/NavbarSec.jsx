@@ -53,7 +53,7 @@ const NavbarSec = () => {
         setIsMegaMenuOpen(false); 
     };
 
-    const isServicesActive = location.pathname.includes("services");
+    const isServicesActive = location.pathname.includes("Services");
 
 
     return (

@@ -6,7 +6,9 @@
 .the-nav:has(.nest-wrapper.active){
     background-color: var(--bg-body);
 }
-
+/* .headroom-wrapper{
+    height: fit-content !important;
+} */
 .nav-container {
     position: relative;
     z-index: 999;

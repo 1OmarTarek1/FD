@@ -1,14 +1,31 @@
+import { useEffect, useState } from 'react';
 import { FaHandHoldingHeart } from "react-icons/fa6";
 import { ServicesCard } from "../../../Components";
-import ServicesData from '../../../Data/ServicesData';
 import './ServicesSection.css';
 
 const ServicesSection = () => {
-    const cards = ServicesData.map(service => (
+    const [services, setServices] = useState([]);
+
+    // Fetch data from the server
+    useEffect(() => {
+        const fetchServices = async () => {
+            try {
+                const response = await fetch('http://127.0.0.1:8000/AllServices/'); 
+                const data = await response.json();
+                setServices(data);
+            } catch (error) {
+                console.error('Error fetching services:', error);
+            }
+        };
+
+        fetchServices();
+    }, []);
+
+    const cards = services.map(service => (
         <ServicesCard 
             key={service.id} 
             id={service.id}  
-            image={service.image} 
+            image={service.bgImg} 
             text={service.txt} 
             pagePath={service.pagePath} 
         />
@@ -28,4 +45,3 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
-

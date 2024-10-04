@@ -1,17 +1,43 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import ProjectsData from '../../../Data/ProjectsData'
-import './ProjectRightSide.css'
+import './ProjectRightSide.css';
 
 const ProjectRightSide = () => {
     const [randomProjects, setRandomProjects] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-        // Shuffle the Projects and pick 3 random ones
-        const shuffledProjects = [...ProjectsData].sort(() => 0.5 - Math.random());
-        const selectedProjects = shuffledProjects.slice(0, 3);
-        setRandomProjects(selectedProjects);
+        const fetchProjects = async () => {
+            try {
+                const response = await fetch('http://127.0.0.1:8000/AllProjects/');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+
+                // Shuffle the projects and pick 3 random ones
+                const shuffledProjects = [...data].sort(() => 0.5 - Math.random());
+                const selectedProjects = shuffledProjects.slice(0, 3);
+                setRandomProjects(selectedProjects);
+            } catch (err) {
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchProjects();
     }, []);
+
+    // Loading and error handling
+    if (loading) {
+        return <div>Loading...</div>; // Optionally, show a loading spinner
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>; // Show error message if fetch fails
+    }
 
     return (
         <div className="">
@@ -21,11 +47,11 @@ const ProjectRightSide = () => {
             <div className="ProjectRightSide">
                 {randomProjects.map(({ id, projectImg, projectTitle }, index) => (
                     <Link 
-                    to={`/Projects`} 
-                    key={id} 
-                    className="project-card"
-                    data-aos={"fade-up"}
-                    data-aos-delay={`${index}00`}
+                        to={`/Projects`} 
+                        key={id} 
+                        className="project-card"
+                        data-aos={"fade-up"}
+                        data-aos-delay={`${index}00`}
                     >
                         <div className="rightProjectImg-wrapper">
                             <img src={projectImg} alt={projectTitle} className="project-img" />
@@ -35,7 +61,7 @@ const ProjectRightSide = () => {
                 ))}
             </div>
         </div>
-    )
+    );
 }
 
 export default ProjectRightSide;
