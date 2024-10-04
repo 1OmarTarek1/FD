@@ -1,0 +1,17 @@
+.gas-price{
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 400px;
+    padding: 12px 35px;
+    background-color: var(--bg-smallComponent );
+    bottom: 0;
+}
+
+@media (max-width: 467px) {
+    .gas-price{
+        width: 100%;
+        padding: 12px 25px;
+    }
+}

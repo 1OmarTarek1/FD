@@ -1,4 +1,5 @@
 import { IoArrowForward } from "react-icons/io5";
+import { Link } from "react-router-dom";
 import './SecondaryBtn.css'
 
 
@@ -7,7 +8,7 @@ import './SecondaryBtn.css'
 
 const SecondaryBtn = (props) => {
     return (
-        <div className="secondary-btn" >
+        <Link to={props.path} className="secondary-btn" data-aos={"fade"}>
             <div className="arrow-wrapper">
                 <span className='btn-Icon btn-Icon-1'>
                     <IoArrowForward />
@@ -20,7 +21,7 @@ const SecondaryBtn = (props) => {
             <span style={{marginLeft:"15px"}}>
                 {props.children}
             </span>
-        </div>
+        </Link>
     )
 }
 

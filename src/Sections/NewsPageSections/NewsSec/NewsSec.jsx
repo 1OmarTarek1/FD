@@ -1,6 +1,6 @@
-import './NewsSec.css';
 import NewsData from '../../../Data/NewsData';
 import { NewsCard } from '../../../Components';
+import './NewsSec.css';
 
 const NewsSec = () => {
     return (

@@ -5,10 +5,13 @@ export { default as SectionWrapper } from './SectionWrapper/SectionWrapper'
 export { default as NestedMegaMenu } from './NavbarComponents/NestedMegaMenu/NestedMegaMenu'
 
 // Home Page Components
+export { default as GasPriceCom } from './HomeComponents/GasPriceCom/GasPriceCom'
+
 
 // Cards
 export { default as ServicesCard } from './Cards/ServicesCard/ServicesCard'
 export { default as NewsCard } from './Cards/NewsCard/NewsCard'
+export { default as ProjectCard } from './Cards/ProjectCard/ProjectCard'
 
 
 // Buttons
@@ -18,6 +21,7 @@ export { default as NavMenuBtn } from './Buttons/NavMenuBtn/NavMenuBtn'
 export { default as SecondaryBtn } from './Buttons/SecondaryBtn/SecondaryBtn'
 export { default as TertiaryBtn } from './Buttons/TertiaryBtn/TertiaryBtn'
 export { default as CirPrimaryBtn } from './Buttons/CirPrimaryBtn/CirPrimaryBtn'
+export { default as WhatsAppBtn } from './Buttons/WhatsAppBtn/WhatsAppBtn'
 
 
 // When Reload Scroll will be to ( 0 ).

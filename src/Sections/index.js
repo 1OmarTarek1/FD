@@ -5,10 +5,13 @@ export { default as FooterSec } from './FooterSec/FooterSec'
 export { default as MainHeaderSec } from './HomePageSections/MainHeaderSec/MainHeaderSec'
 export { default as ServicesSection } from './HomePageSections/ServicesSection/ServicesSection'
 export { default as ImportantNewsSec } from './HomePageSections/ImportantNewsSec/ImportantNewsSec'
+export { default as LastProjectsSec } from './HomePageSections/LastProjectsSec/LastProjectsSec'
 
 // News Page Sections
 export { default as NewsHeaderSec } from './NewsPageSections/NewsHeaderSec/NewsHeaderSec'
 export { default as NewsSec } from './NewsPageSections/NewsSec/NewsSec'
+export { default as ServiceRightSide } from './NewsPageSections/ServiceRightSide/ServiceRightSide'
+export { default as ProjectRightSide } from './NewsPageSections/ProjectRightSide/ProjectRightSide'
 
 
 export { default as ProjectsSec } from './ProjectsSec/ProjectsSec'

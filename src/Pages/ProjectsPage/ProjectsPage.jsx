@@ -16,7 +16,6 @@ const ProjectsPage = () => {
                 </span>
             </h1>
             <ProjectsSec />
-
         </div>
     );
 };

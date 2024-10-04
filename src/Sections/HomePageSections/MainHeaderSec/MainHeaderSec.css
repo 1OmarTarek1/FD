@@ -54,54 +54,15 @@
     margin-bottom: 1.5rem;
 }
 
-.vid-btn {
-    position: absolute;
-    bottom: 5px;
-    left: 405px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: calc(62.38px - 5px);
-    height: calc(62.38px - 5px);
-    /* border-radius: 5px; */
-    background-color: var(--bg-smallComponent );
-    color: green;
-    border: 1px solid transparent;
-    cursor: pointer;
-    transition: var(--transition-main) ;
-    text-transform: uppercase;
-}
-.vid-btn svg{
-    position: relative;
-    top: -1px;
-    font-size: 2rem;
-    transition: var(--transition-main);
-}
-.vid-btn:hover svg{
-    transform: scale(1.1);
-}
 
 
 
-.gas-price{
-    position: absolute;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    width: 400px;
-    padding: 12px 35px;
-    background-color: var(--bg-smallComponent );
-    bottom: 0;
-}
+
+
 
 @media (max-width: 767px) {
     .vid-title {
         width: 350px;
-    }
-    .vid-btn {
-        width: 200px;
-        height: 3.7rem;
-        font-size: 14px;
     }
 }
 @media (max-width: 567px) {
@@ -112,20 +73,5 @@
     }
     .vid-dis {
         font-size: 1rem;
-    }
-    .vid-btn {
-        padding-inline: 20px 25px;
-        width: 180px;
-        height: 3.2rem;
-        font-size: 12px;
-    }
-    .vid-btn  svg{
-        font-size: 1.7rem;
-    }
-}
-@media (max-width: 467px) {
-    .gas-price{
-        width: 100%;
-        padding: 12px 25px;
     }
 }

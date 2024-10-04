@@ -41,6 +41,10 @@
     border-radius: 4px;
     transition: var(--transition-main);
 }
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--font-secondaryColor);
+}
 
 .form-group input:focus,
 .form-group textarea:focus {

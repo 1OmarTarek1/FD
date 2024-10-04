@@ -1,0 +1,47 @@
+.vid-btn {
+    position: absolute;
+    bottom: 5px;
+    left: 405px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(62.38px - 5px);
+    height: calc(62.38px - 5px);
+    /* border-radius: 5px; */
+    background-color: var(--bg-smallComponent );
+    color: green;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: var(--transition-main) ;
+    text-transform: uppercase;
+}
+.vid-btn svg{
+    position: relative;
+    top: -1px;
+    font-size: 2rem;
+    transition: var(--transition-main);
+}
+.vid-btn:hover svg{
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 467px) {
+    .vid-btn {
+        position: absolute;
+        bottom: calc(63.38px + 5px);
+        left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(62.38px - 5px);
+        height: calc(62.38px - 5px);
+        /* border-radius: 5px; */
+        background-color: var(--bg-smallComponent );
+        color: green;
+        border: 1px solid transparent;
+        cursor: pointer;
+        transition: var(--transition-main) ;
+        text-transform: uppercase;
+    }
+}

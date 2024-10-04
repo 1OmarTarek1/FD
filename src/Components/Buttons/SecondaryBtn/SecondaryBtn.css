@@ -4,16 +4,17 @@
     align-items: center;
     justify-content: center;
     width: fit-content;
-    padding: 17px 35px;
+    padding: 15px 25px 15px 15px;
     font-size: 15px;
     font-weight: 500;
     background-color: transparent;
     border: 2px solid transparent;
-    border-radius: 50px;
+    border-radius: 5px;
     text-transform: uppercase;
     cursor: pointer;
     transition: var(--transition-animation);
     overflow: hidden;
+    color: #fff;
 }
 .secondary-btn::before{
     content: "";
@@ -21,7 +22,7 @@
     left: 0%;
     height: 100%;
     width: 100%;
-    border-radius: 50px;
+    border-radius: 5px;
     border: 2px solid var(--color-primary);
     background-color: var(--color-primary);
     transition: var(--transition-animation);
@@ -38,6 +39,7 @@
     position: absolute;
     font-size: 18px;
     transition: var(--transition-animation);
+    color: #fff;
 }
 .btn-Icon-1{
     left: 50%;
@@ -54,6 +56,7 @@
 /*start effect*/
 .secondary-btn:hover{
     border: 2px solid var(--color-primary);
+    color: var(--color-primary);
 }
 .secondary-btn:hover::before{
     left: 100%;
@@ -61,8 +64,10 @@
 .secondary-btn:hover .btn-Icon-1{
     left: 100%;
     transform: translate(0%, -50%);
+    color: var(--color-primary);
 }
 .secondary-btn:hover .btn-Icon-2{
     left: 50%;
     transform: translate(-50%, -50%);
+    color: var(--color-primary);
 }

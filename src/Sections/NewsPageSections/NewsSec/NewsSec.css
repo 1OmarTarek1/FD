@@ -4,3 +4,12 @@
     padding: 25px;
     max-width: 860px;
 }
+
+@media (max-width: 1024px) {
+    .all-news{
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        max-width: 100%;
+    }
+}

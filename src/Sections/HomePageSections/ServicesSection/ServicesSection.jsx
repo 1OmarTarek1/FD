@@ -1,3 +1,4 @@
+import { FaHandHoldingHeart } from "react-icons/fa6";
 import { ServicesCard } from "../../../Components";
 import ServicesData from '../../../Data/ServicesData';
 import './ServicesSection.css';
@@ -8,7 +9,6 @@ const ServicesSection = () => {
             key={service.id} 
             id={service.id}  
             image={service.image} 
-            icon={service.icon} 
             text={service.txt} 
             pagePath={service.pagePath} 
         />
@@ -16,7 +16,10 @@ const ServicesSection = () => {
 
     return (
         <div className='services-section' data-aos="fade-up">
-            <h2 className="section-title">Our Services</h2>
+            <h1 className="section-title">
+                Our Services
+                <FaHandHoldingHeart size={40}/>
+            </h1>
             <div className="all-servicesCard">
                 {cards}
             </div>

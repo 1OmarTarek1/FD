@@ -21,7 +21,7 @@
 }
 
 .important-card {
-    height: 425px;
+    /* height: 425px; */
     display: flex;
     flex-direction: column;
     flex: 1 30%;
@@ -69,4 +69,10 @@
 }
 .imp-btnWrapper .cirPrimary-btn:hover .arrowBtn{
     color: #fff;
+}
+
+@media (max-width: 400px) {
+    .important-card {
+        min-width: 100%;
+    }
 }

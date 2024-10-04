@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import ServicesData from '../../../Data/ServicesData';
 import { useEffect, useRef } from 'react';
 import './NestedMegaMenu.css';
+import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
 
 const NestedMegaMenu = ({ isMegaMenuOpen, setIsOpen }) => {
     const menuRef = useRef(null);
@@ -32,7 +33,7 @@ const NestedMegaMenu = ({ isMegaMenuOpen, setIsOpen }) => {
                 <li key={id} className="mega-item">
                     <NavLink to={`/Services/${id}`} className="mega-link" onClick={()=>{setIsOpen(false)}}>
                         <div className="item-content">
-                            <img src={icon} alt={txt} className="item-icon" />
+                            <IoMdCheckmarkCircleOutline  size={20} color='var(--color-primary)' />
                             <div className="item-text">{txt}</div>
                         </div>
                     </NavLink>

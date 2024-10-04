@@ -1,6 +1,6 @@
 import React from 'react';
 import NewsData from '../../../Data/NewsData';
-import { CirPrimaryBtn } from '../../../Components';
+// import { CirPrimaryBtn } from '../../../Components';
 import { IoNewspaperOutline } from 'react-icons/io5';
 import './ImportantNewsSec.css';
 
@@ -30,9 +30,9 @@ const ImportantNewsSec = () => {
                         <h2 className="importantNews-title">
                             {title}
                         </h2>
-                        <div className="imp-btnWrapper">
-                            <CirPrimaryBtn />
-                        </div>
+                        {/* <div className="imp-btnWrapper">
+                            <CirPrimaryBtn path={"/News"}/>
+                        </div> */}
                     </li>
                 ))}
             </ul>

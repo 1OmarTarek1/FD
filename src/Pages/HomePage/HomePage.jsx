@@ -1,5 +1,5 @@
-import { SectionWrapper } from '../../Components'
-import { ImportantNewsSec, MainHeaderSec, ServicesSection, WhyUsSec } from '../../Sections'
+import { SecondaryBtn, SectionWrapper } from '../../Components'
+import { ImportantNewsSec, LastProjectsSec, MainHeaderSec, ServicesSection, WhyUsSec } from '../../Sections'
 import './HomePage.css'
 
 
@@ -16,7 +16,20 @@ const HomePage = () => {
             
             <SectionWrapper>
                 <ImportantNewsSec />
+                <SecondaryBtn path={"/News"}>
+                    Show more
+                </SecondaryBtn>
             </SectionWrapper>
+
+
+            <SectionWrapper>
+                <LastProjectsSec />
+                <SecondaryBtn path={"/Projects"}>
+                    Show more
+                </SecondaryBtn>
+            </SectionWrapper>
+
+
 
             <div style={{padding:"25px"}}>
                 <WhyUsSec />

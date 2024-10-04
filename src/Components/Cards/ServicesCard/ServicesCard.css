@@ -34,6 +34,8 @@
     font-weight: 600;
     font-size: 22px;
     max-width: 180px;
+    opacity: 1;
+    transition: var(--transition-main);
 }
 
 
@@ -51,9 +53,16 @@
     transform: translate(-50%, -50%);
 }
 
-
+.all-servicesCard:hover 
+.service-cardLink:not(:hover) .bg-cardImg{
+    filter: brightness(50%);
+}
 .service-cardLink:hover .bg-cardImg{
     transform: scale(1.2);
+    filter: brightness(100%);
+}
+.service-cardLink:hover .text{
+    opacity: 0;
 }
 
 

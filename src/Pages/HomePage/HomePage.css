@@ -69,3 +69,17 @@
 .web-link.active{
     color: var(--color-primary);
 } 
+
+
+
+
+
+.home-page .section-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home-page .secondary-btn{
+    margin-block: 2rem;
+}

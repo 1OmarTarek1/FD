@@ -1,6 +1,7 @@
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 import logoImg from '../../Assets/Images/FDicon.png'
 import './FooterSec.css'
+import { Link } from 'react-router-dom';
 
 
 
@@ -73,26 +74,26 @@ const FooterSec = () => {
                         <h6 className='text-uppercase fw-bold mb-4'
                             style={{
                                 color:"var(--font-mainColor)"
-                            }}>Products</h6>
+                            }}>Pages</h6>
                         <p>
-                            <a href='!##!' className='text-reset'>
-                            Angular
-                            </a>
+                            <Link to='/' className='text-reset'>
+                            Home
+                            </Link>
                         </p>
                         <p>
-                            <a href='!##!' className='text-reset'>
-                            React
-                            </a>
+                            <Link to='/News' className='text-reset'>
+                            News
+                            </Link>
                         </p>
                         <p>
-                            <a href='!##!' className='text-reset'>
-                            Vue
-                            </a>
+                            <Link to='/Projects' className='text-reset'>
+                            Projects
+                            </Link>
                         </p>
                         <p>
-                            <a href='!##!' className='text-reset'>
-                            Laravel
-                            </a>
+                            <Link to='/About    ' className='text-reset'>
+                            About
+                            </Link>
                         </p>
                         </MDBCol>
             
@@ -100,26 +101,26 @@ const FooterSec = () => {
                         <h6 className='text-uppercase fw-bold mb-4'
                             style={{
                                 color:"var(--font-mainColor)"
-                            }}>links</h6>
+                            }}>Links</h6>
                         <p>
-                            <a href='!##!' className='text-reset'>
+                            <Link to='#!' className='text-reset'>
                             Pricing
-                            </a>
+                            </Link>
                         </p>
                         <p>
-                            <a href='!##!' className='text-reset'>
+                            <Link to='#!' className='text-reset'>
                             Settings
-                            </a>
+                            </Link>
                         </p>
                         <p>
-                            <a href='!##!' className='text-reset'>
+                            <Link to='#!' className='text-reset'>
                             Orders
-                            </a>
+                            </Link>
                         </p>
                         <p>
-                            <a href='!##!' className='text-reset'>
+                            <Link to='#!' className='text-reset'>
                             Help
-                            </a>
+                            </Link>
                         </p>
                         </MDBCol>
             
@@ -151,10 +152,7 @@ const FooterSec = () => {
             <div className='text-center p-4' 
             style={{ background:"var(--bg-footer)", borderTop:'1px solid rgb(255 255 255 / 15%)'}}
             >
-                © 2021 Copyright:
-                <a className='text-reset fw-bold' href='!#https://mdbootstrap.com/'>
-                MDBootstrap.com
-                </a>
+                © 2021 Copyright <a className='text-reset fw-bold' href='!#'> OB </a>Created by love ❤️
             </div>
         </MDBFooter>
         );
