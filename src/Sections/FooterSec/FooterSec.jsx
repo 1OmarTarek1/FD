@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom';
 
 
 const FooterSec = () => {
+    const phoneNumber = "+201150745430"; // Replace with your WhatsApp number
+    const message = "Hello! I would like to contact you."; // Custom message
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     return (
         <MDBFooter 
             style={{backgroundColor:"var(--bg-body)"}}
@@ -147,10 +150,10 @@ const FooterSec = () => {
                 </MDBContainer>
             </section>
         
-            <div className='text-center p-4' 
+            <div className='OB text-center p-4' 
             style={{ background:"var(--bg-footer)", borderTop:'1px solid rgb(255 255 255 / 15%)'}}
             >
-                © 2024 Copyright <a className='text-reset fw-bold' href='!#'> OB </a>Created by love ❤️
+                © 2024 Copyright <a className='text-reset fw-bold' href={whatsappLink} target="_blank" rel="noopener noreferrer">Powered by OB </a>Created by love ❤️
             </div>
         </MDBFooter>
         );

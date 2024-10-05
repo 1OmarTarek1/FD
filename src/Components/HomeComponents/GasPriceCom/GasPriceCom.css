@@ -62,9 +62,13 @@
 
 @media (max-width: 500px) {
     .gas-price{
-        width: 98%;
+        width: 100%;
         padding: 12px 25px;
         left: 0;
-        margin-left: 1%;
+        bottom: 0;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        /* margin-left: 1%; */
     }
 }
