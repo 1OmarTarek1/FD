@@ -1,3 +1,3 @@
-const BackendLink = "http://127.0.0.1:8000";
+const BackendLink = "https://fdenergies.com";
 
 export default BackendLink
