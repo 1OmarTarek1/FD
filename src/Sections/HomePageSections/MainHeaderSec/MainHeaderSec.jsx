@@ -1,5 +1,5 @@
 import bgVideo from '../../../Assets/Videos/bgVid.mp4';
-import { GasPriceCom, WhatsAppBtn } from '../../../Components';
+import { GasPriceCom } from '../../../Components';
 import './MainHeaderSec.css';
 
 const MainHeaderSec = () => {
@@ -24,7 +24,6 @@ const MainHeaderSec = () => {
                     Oil & Gas Services
                 </div>
             </div>
-            <WhatsAppBtn />
             <GasPriceCom />
         </div>
     );

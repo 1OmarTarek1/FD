@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './ServicesPage.css';
+import { SecondaryBtn } from '../../Components';
+
+
+
+
+
 
 const ServicesPage = () => {
     const { ServiceId } = useParams();
@@ -83,10 +89,21 @@ const ServicesPage = () => {
                                 >
                                     <div className='point-icon'></div>
                                     {point}
+                                    {/* <div className="point-box">
+
+                                    </div> */}
                                 </li>
                             ))
                         )}
                     </ul>
+                    {service.serviceData.title === "Training Services" && (
+                        <div className="mt-5">
+                            <SecondaryBtn path="/Training">
+                                Show More Details
+                            </SecondaryBtn>
+                        </div>
+                    )}
+
                 </div>
             </div>
         </div>

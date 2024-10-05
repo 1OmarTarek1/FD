@@ -22,7 +22,7 @@ const AboutHeaderSec = () => {
                     Your competent partner for more
                     than <font color="red">15 years</font> .
                 </h1>
-        </div>
+            </div>
         </div>
     )
 }

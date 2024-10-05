@@ -1,19 +1,19 @@
 .vid-btn {
-    position: absolute;
-    bottom: 5px;
-    left: 405px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(62.38px - 5px);
-    height: calc(62.38px - 5px);
-    /* border-radius: 5px; */
-    background-color: var(--bg-smallComponent );
-    color: green;
+    width: calc(50px);
+    height: calc(50px);
+    border-radius: 50%;
+    background-color: green;
+    color: #fff;
     border: 1px solid transparent;
     cursor: pointer;
     transition: var(--transition-main) ;
-    text-transform: uppercase;
+    z-index: 999;
 }
 .vid-btn svg{
     position: relative;
@@ -26,22 +26,3 @@
 }
 
 
-@media (max-width: 467px) {
-    .vid-btn {
-        position: absolute;
-        bottom: calc(63.38px + 5px);
-        left: 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: calc(62.38px - 5px);
-        height: calc(62.38px - 5px);
-        /* border-radius: 5px; */
-        background-color: var(--bg-smallComponent );
-        color: green;
-        border: 1px solid transparent;
-        cursor: pointer;
-        transition: var(--transition-main) ;
-        text-transform: uppercase;
-    }
-}

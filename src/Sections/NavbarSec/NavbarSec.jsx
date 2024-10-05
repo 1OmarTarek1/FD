@@ -104,6 +104,14 @@ const NavbarSec = () => {
                                 setIsOpen={setIsOpen}
                             />
                         </div>
+                        <NavLink to="/Training" className="web-link" onClick={closeMenu}>
+                            <li className="link-wrapper">
+                                Training
+                                <span className='link-arrow'>
+                                    <IoArrowForward />
+                                </span>
+                            </li>
+                        </NavLink>
                         <NavLink to="/News" className="web-link" onClick={closeMenu}>
                             <li className="link-wrapper">
                                 News
@@ -122,7 +130,7 @@ const NavbarSec = () => {
                         </NavLink>
                         <NavLink to="/About" className="web-link" onClick={closeMenu}>
                             <li className="link-wrapper">
-                                About Us
+                                About
                                 <span className='link-arrow'>
                                     <IoArrowForward />
                                 </span>
@@ -130,7 +138,7 @@ const NavbarSec = () => {
                         </NavLink>
                         <NavLink to="/Contact" className="web-link" onClick={closeMenu}>
                             <li className="link-wrapper">
-                                Contact Us
+                                Contact
                                 <span className='link-arrow'>
                                     <IoArrowForward />
                                 </span>

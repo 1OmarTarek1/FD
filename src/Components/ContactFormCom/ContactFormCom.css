@@ -1,10 +1,12 @@
 .form-wrapper {
     margin: 6rem 25px;
 }
-.contact-contentWrapper{
+
+.contact-contentWrapper {
     display: flex;
     gap: 2rem;
 }
+
 .contact-form {
     width: 45%;
     display: flex;
@@ -18,18 +20,22 @@
     border: 1px solid var(--lightBorder-color);
     border-radius: 8px;
 }
+
 .form-row {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     gap: 1.2rem;
 }
+
 .form-row.first {
     flex-direction: row;
 }
+
 .form-group {
     flex: 1;
 }
+
 .form-group input,
 .form-group textarea {
     width: 100%;
@@ -41,25 +47,27 @@
     border-radius: 4px;
     transition: var(--transition-main);
 }
+
 .form-group input::placeholder,
 .form-group textarea::placeholder {
     color: var(--font-secondaryColor);
 }
-.form-group input:focus,
-.form-group textarea:focus {
-    color: var(--font-MainColor);
-}
 
 .form-group input:focus,
 .form-group textarea:focus {
+    color: var(--font-MainColor);
     border-color: var(--color-primary);
     outline: none;
 }
+
 textarea {
     resize: vertical;
 }
+
 .submit-btn {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px 20px;
     background-color: var(--color-primary);
     color: #fff;
@@ -69,29 +77,63 @@ textarea {
     cursor: pointer;
     font-weight: 500;
     transition: var(--transition-main);
+    min-width: 150px;  /* Ensures enough space for spinner */
+    position: relative;
 }
+
 .submit-btn:hover {
     background-color: #fff;
     color: var(--color-primary);
 }
 
+.submit-btn:disabled {
+    background-color: var(--color-primary-dark); /* Darker color when disabled */
+    cursor: not-allowed;
+}
 
-@media (max-width:767px) {
+/* Loading spinner */
+.loading-spinner {
+    border: 2px solid var(--lightBorder-color);
+    border-radius: 50%;
+    border-top: 2px solid var(--font-mainColor);
+    width: 20px;
+    height: 20px;
+    animation: spin .5s linear infinite;
+    margin-left: 5px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 767px) {
     .form-group input,
     .form-group textarea {
         font-size: 14px;
     }
+
     .form-group input::placeholder,
     .form-group textarea::placeholder {
         font-size: 14px;
     }
 }
-@media (max-width:400px) {
+
+@media (max-width: 400px) {
+    .form-row.first {
+        flex-direction: column;
+    }
+
     .form-group input,
     .form-group textarea {
         padding: 8px;
         font-size: 13px;
     }
+
     .form-group input::placeholder,
     .form-group textarea::placeholder {
         font-size: 13px;

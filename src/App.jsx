@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import { NavbarSec, FooterSec } from './Sections';
-import { DynamicTitle, ScrollToTop, ToTopBtn, WebRoutes, Loading } from './Components';
+import { DynamicTitle, ScrollToTop, ToTopBtn, WebRoutes, Loading, WhatsAppBtn } from './Components';
 import './App.css';
 
 const App = () => {
@@ -30,6 +30,7 @@ const App = () => {
                             <ToTopBtn />
                         </div>
                     </div>
+                    <WhatsAppBtn />
                     <ScrollToTop />
                     <DynamicTitle />
                 </>

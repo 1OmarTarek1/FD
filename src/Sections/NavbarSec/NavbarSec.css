@@ -1,3 +1,6 @@
+.headroom--scrolled{
+    z-index: 2 !important; 
+}
 .headroom--scrolled .the-nav{
     background-color: var(--bg-scrolled);
     transition: var(--transition-main);

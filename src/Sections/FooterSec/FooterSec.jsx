@@ -71,30 +71,30 @@ const FooterSec = () => {
                         </MDBCol>
             
                         <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
-                        <h6 className='text-uppercase fw-bold mb-4'
-                            style={{
-                                color:"var(--font-mainColor)"
-                            }}>Pages</h6>
-                        <p>
-                            <Link to='/' className='text-reset'>
-                            Home
-                            </Link>
-                        </p>
-                        <p>
-                            <Link to='/News' className='text-reset'>
-                            News
-                            </Link>
-                        </p>
-                        <p>
-                            <Link to='/Projects' className='text-reset'>
-                            Projects
-                            </Link>
-                        </p>
-                        <p>
-                            <Link to='/About    ' className='text-reset'>
-                            About
-                            </Link>
-                        </p>
+                            <h6 className='text-uppercase fw-bold mb-4'
+                                style={{
+                                    color:"var(--font-mainColor)"
+                                }}>Pages</h6>
+                            <p>
+                                <Link to='/' className='text-reset'>
+                                Home
+                                </Link>
+                            </p>
+                            <p>
+                                <Link to='/News' className='text-reset'>
+                                News
+                                </Link>
+                            </p>
+                            <p>
+                                <Link to='/Projects' className='text-reset'>
+                                Projects
+                                </Link>
+                            </p>
+                            <p>
+                                <Link to='/About    ' className='text-reset'>
+                                About
+                                </Link>
+                            </p>
                         </MDBCol>
             
                         <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
@@ -103,23 +103,18 @@ const FooterSec = () => {
                                 color:"var(--font-mainColor)"
                             }}>Links</h6>
                         <p>
-                            <Link to='#!' className='text-reset'>
-                            Pricing
+                            <Link to='https://www.opec.org/opec_web/en/' target='-blank' className='text-reset'>
+                                OPEC
                             </Link>
                         </p>
                         <p>
-                            <Link to='#!' className='text-reset'>
-                            Settings
+                            <Link to='https://www.aramco.com/ar'  target='-blank' className='text-reset'>
+                                Aramco
                             </Link>
                         </p>
                         <p>
-                            <Link to='#!' className='text-reset'>
-                            Orders
-                            </Link>
-                        </p>
-                        <p>
-                            <Link to='#!' className='text-reset'>
-                            Help
+                            <Link to='https://noc.ly/' target='-blank' className='text-reset'>
+                                NOC
                             </Link>
                         </p>
                         </MDBCol>
@@ -132,18 +127,21 @@ const FooterSec = () => {
                             Contact</h6>
                         <p>
                             <MDBIcon icon="home" className="me-2" />
-                            New York, NY 10012, US
+                            5 Grognet Street Mosta MST 3613 MALTA
                         </p>
                         <p>
                             <MDBIcon icon="envelope" className="me-3" />
-                            info@example.com
+                            info@FDEnergies.com
                         </p>
                         <p>
-                            <MDBIcon icon="phone" className="me-3" /> + 01 234 567 88
+                            <MDBIcon icon="phone" className="me-3" /> + 20 1153177510
                         </p>
                         <p>
-                            <MDBIcon icon="print" className="me-3" /> + 01 234 567 89
+                            <MDBIcon icon="phone" className="me-3" /> + 002 18920173575
                         </p>
+                        {/* <p>
+                            <MDBIcon icon="print" className="me-3" /> + 20 
+                        </p> */}
                         </MDBCol>
                     </MDBRow>
                 </MDBContainer>
@@ -152,7 +150,7 @@ const FooterSec = () => {
             <div className='text-center p-4' 
             style={{ background:"var(--bg-footer)", borderTop:'1px solid rgb(255 255 255 / 15%)'}}
             >
-                © 2021 Copyright <a className='text-reset fw-bold' href='!#'> OB </a>Created by love ❤️
+                © 2024 Copyright <a className='text-reset fw-bold' href='!#'> OB </a>Created by love ❤️
             </div>
         </MDBFooter>
         );

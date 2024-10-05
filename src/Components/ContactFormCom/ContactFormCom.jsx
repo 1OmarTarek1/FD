@@ -11,6 +11,7 @@ const ContactFormCom = () => {
     });
 
     const [responseMessage, setResponseMessage] = useState("");  // For feedback
+    const [loading, setLoading] = useState(false);  // Loading state
 
     const handleChange = (e) => {
         setFormData({
@@ -21,12 +22,13 @@ const ContactFormCom = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-    
+        setLoading(true); // Start loading animation
+
         // Get CSRF token from cookie
         const csrfToken = document.cookie.split('; ')
             .find(row => row.startsWith('csrftoken'))
             ?.split('=')[1];
-    
+
         fetch('http://127.0.0.1:8000/submit-contact-form/', {
             method: 'POST',
             headers: {
@@ -47,15 +49,20 @@ const ContactFormCom = () => {
                     company: "",
                     message: "",
                 });
+                setResponseMessage("Message sent successfully!");
             } else {
                 console.error("Error:", data.message);
+                setResponseMessage("There was an error submitting the form.");
             }
         })
         .catch((error) => {
             console.error("Error:", error);
+            setResponseMessage("Can't send please try again.");
+        })
+        .finally(() => {
+            setLoading(false);  // End loading animation
         });
     };
-    
 
     return (
         <form className="contact-form" onSubmit={handleSubmit} data-aos={"fade-right"}>
@@ -128,10 +135,23 @@ const ContactFormCom = () => {
                 ></textarea>
             </div>
 
-            <button type="submit" className="submit-btn">Send Message</button>
+            <button type="submit" className="submit-btn" disabled={loading}>
+                {loading ? <div className="loading-spinner"></div> : "Send Message"}
+            </button>
 
             {/* Feedback message */}
-            {responseMessage && <p>{responseMessage}</p>}
+            {responseMessage && <p style={{
+                // responseMessage?
+                fontSize:"13px",
+                position:"absolute",
+                bottom:"-5px",
+                left:"50%",
+                transform:"translateX(-50%)",
+                width:"100%",
+                textAlign:"center"
+            }}>
+                {responseMessage}
+            </p>}
         </form>
     );
 }
