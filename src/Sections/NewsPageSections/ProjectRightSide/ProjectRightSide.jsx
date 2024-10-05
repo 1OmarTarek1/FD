@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ProjectRightSide.css';
+import { BackendLink } from '../../../Components';
 
 const ProjectRightSide = () => {
     const [randomProjects, setRandomProjects] = useState([]);
@@ -10,7 +11,7 @@ const ProjectRightSide = () => {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:8000/AllProjects/');
+                const response = await fetch(`${BackendLink}/AllProjects/`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }

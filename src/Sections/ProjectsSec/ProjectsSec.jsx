@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ProjectCard } from '../../Components';
+import { BackendLink, ProjectCard } from '../../Components';
 import './ProjectsSec.css';
 
 const ProjectsSec = () => {
@@ -11,7 +11,7 @@ const ProjectsSec = () => {
         // Fetch data from the server
         const fetchProjects = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:8000/AllProjects/');
+                const response = await fetch(`${BackendLink}/AllProjects/`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch projects');
                 }

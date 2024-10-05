@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { NewsCard } from '../../../Components';
+import { BackendLink, NewsCard } from '../../../Components';
 import './NewsSec.css';
 
 const NewsSec = () => {
@@ -7,7 +7,7 @@ const NewsSec = () => {
 
     // Fetch data from the backend
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/AllNews/')
+        fetch(`${BackendLink}/AllNews/`)
             .then(response => response.json())
             .then(data => setNewsData(data))
             .catch(error => console.error('Error fetching news:', error));

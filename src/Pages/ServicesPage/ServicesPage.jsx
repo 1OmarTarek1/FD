@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './ServicesPage.css';
-import { SecondaryBtn } from '../../Components';
+import { BackendLink, SecondaryBtn } from '../../Components';
 
 
 
@@ -17,7 +17,7 @@ const ServicesPage = () => {
     useEffect(() => {
         const fetchServiceData = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:8000/AllServices/');
+                const response = await fetch(`${BackendLink}/AllServices/`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch data');
                 }

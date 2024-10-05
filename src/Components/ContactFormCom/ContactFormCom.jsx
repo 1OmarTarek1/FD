@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './ContactFormCom.css';
+import { BackendLink } from "../../Components";
 
 const ContactFormCom = () => {
     const [formData, setFormData] = useState({
@@ -29,7 +30,7 @@ const ContactFormCom = () => {
             .find(row => row.startsWith('csrftoken'))
             ?.split('=')[1];
 
-        fetch('http://127.0.0.1:8000/submit-contact-form/', {
+        fetch(`${BackendLink}/submit-contact-form/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

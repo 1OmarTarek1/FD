@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
 import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
+import { BackendLink } from "../../../Components";
 import './NestedMegaMenu.css';
 
 const NestedMegaMenu = ({ isMegaMenuOpen, setIsOpen }) => {
@@ -12,7 +13,7 @@ const NestedMegaMenu = ({ isMegaMenuOpen, setIsOpen }) => {
     useEffect(() => {
         const fetchServicesData = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:8000/AllServices/');
+                const response = await fetch(`${BackendLink}/AllServices/`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }

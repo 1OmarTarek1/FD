@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './TrainingPage.css';
+import { BackendLink } from '../../Components';
 
-// API URLs
-const TRAINING_API_URL = 'http://127.0.0.1:8000/AllTrianings/';
-const SERVICE_API_URL = 'http://127.0.0.1:8000/AllServices/';
 
 const TrainingPage = () => {
     // State to hold training data and service data
@@ -15,7 +13,7 @@ const TrainingPage = () => {
         // Fetch Training Data
         const fetchTrainings = async () => {
             try {
-                const response = await fetch(TRAINING_API_URL);
+                const response = await fetch(`${BackendLink}/AllTrianings/`);
                 const data = await response.json();
                 setTrainings(data);  // Assuming `data` is an array of trainings
             } catch (error) {
@@ -26,7 +24,7 @@ const TrainingPage = () => {
         // Fetch Service Data (for bgImg and txt)
         const fetchService = async () => {
             try {
-                const response = await fetch(SERVICE_API_URL);
+                const response = await fetch(`${BackendLink}/AllServices/`);
                 const data = await response.json();
                 console.log('Full Service Data:', data);  // Log the full API response
         

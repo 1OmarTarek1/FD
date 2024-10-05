@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BackendLink } from "../../../Components";
 import './GasPriceCom.css';
 
 const GasPriceCom = () => {
@@ -14,7 +15,7 @@ const GasPriceCom = () => {
     // Function to fetch prices
     const fetchPrices = async () => {
         try {
-            const response = await fetch('http://127.0.0.1:8000/oil-price/'); // Updated API endpoint
+            const response = await fetch(`${BackendLink}/oil-price/`); // Updated API endpoint
             const data = await response.json();
 
             // Assuming the API returns data in the format with WTI_Crude, Brent_Crude, and Natural_Gas

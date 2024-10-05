@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { IoNewspaperOutline } from 'react-icons/io5';
+import { BackendLink } from '../../../Components';
 import './ImportantNewsSec.css';
 
 const ImportantNewsSec = () => {
@@ -10,7 +11,7 @@ const ImportantNewsSec = () => {
     useEffect(() => {
         const fetchImportantNews = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:8000/AllNews/');
+                const response = await fetch(`${BackendLink}/AllNews/`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch data');
                 }

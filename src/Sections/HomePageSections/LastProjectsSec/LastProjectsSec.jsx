@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { GrUserWorker } from 'react-icons/gr';
-import { ProjectCard } from '../../../Components';
+import { BackendLink, ProjectCard } from '../../../Components';
 import './LastProjectsSec.css';
 
 const LastProjectsSec = () => {
@@ -11,7 +11,7 @@ const LastProjectsSec = () => {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:8000/AllProjects/');
+                const response = await fetch(`${BackendLink}/AllProjects/`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }

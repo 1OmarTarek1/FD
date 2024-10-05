@@ -34,3 +34,7 @@ export { default as Loading } from './Loading/Loading'
 
 export { default as ContactFormCom } from './ContactFormCom/ContactFormCom'
 export { default as OfficeLocationCom } from './OfficeLocationCom/OfficeLocationCom'
+
+
+// BackendLink
+export { default as BackendLink } from './BackendLink/BackendLink'

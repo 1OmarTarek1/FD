@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { BackendLink } from '../../../Components';
 import './NewsHeaderSec.css';
 
 const NewsHeaderSec = () => {
@@ -15,7 +16,7 @@ const NewsHeaderSec = () => {
     useEffect(() => {
         const fetchNewsData = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:8000/AllNews/');
+                const response = await fetch(`${BackendLink}/AllNews/`);
                 const data = await response.json();
                 
                 // Filter for important news

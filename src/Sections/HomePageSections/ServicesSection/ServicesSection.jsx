@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { FaHandHoldingHeart } from "react-icons/fa6";
-import { ServicesCard } from "../../../Components";
+import { ServicesCard, BackendLink } from "../../../Components";
 import './ServicesSection.css';
 
 const ServicesSection = () => {
@@ -10,7 +10,7 @@ const ServicesSection = () => {
     useEffect(() => {
         const fetchServices = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:8000/AllServices/'); 
+                const response = await fetch(`${BackendLink}/AllServices/`); 
                 const data = await response.json();
                 setServices(data);
             } catch (error) {
