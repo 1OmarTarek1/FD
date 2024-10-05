@@ -89,6 +89,16 @@ const NavbarSec = () => {
                                 </span>
                             </li>
                         </NavLink>
+
+                        <NavLink to="/About" className="web-link" onClick={closeMenu}>
+                            <li className="link-wrapper">
+                                About
+                                <span className='link-arrow'>
+                                    <IoArrowForward />
+                                </span>
+                            </li>
+                        </NavLink>
+
                         <div className={`web-link nest-wrapper ${isMegaMenuOpen || isServicesActive ? 'active' : ''}`}
                         onClick={toggleMegaMenu} 
                         style={{cursor: "pointer"}}
@@ -128,14 +138,7 @@ const NavbarSec = () => {
                                 </span>
                             </li>
                         </NavLink>
-                        <NavLink to="/About" className="web-link" onClick={closeMenu}>
-                            <li className="link-wrapper">
-                                About
-                                <span className='link-arrow'>
-                                    <IoArrowForward />
-                                </span>
-                            </li>
-                        </NavLink>
+
                         <NavLink to="/Contact" className="web-link" onClick={closeMenu}>
                             <li className="link-wrapper">
                                 Contact

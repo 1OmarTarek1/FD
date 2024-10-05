@@ -101,7 +101,7 @@
     background-color: var(--bg-footer);
     margin-bottom: 20px; 
     z-index: 1;
-    transition: var(--transition-main);
+    /* transition: var(--transition-main); */
     border-bottom: 1px solid var(--lightBorder-color);
 }
 

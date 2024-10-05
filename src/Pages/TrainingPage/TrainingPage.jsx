@@ -76,8 +76,8 @@ const TrainingPage = () => {
             <div className="training-section">
                 <ul className="allTraining">
                     {/* Map through the trainings data */}
-                    {trainings.map((training) => (
-                        <li className="theTrain" key={training.id}>
+                    {trainings.map((training, index) => (
+                        <li className="theTrain" key={training.id} data-aos={"fade-up"} data-aos-delay={`${index}00`}>
                             <h2 className="train-title">
                                 {training.title}
                             </h2>

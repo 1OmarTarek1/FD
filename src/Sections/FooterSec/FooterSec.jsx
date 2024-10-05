@@ -23,10 +23,10 @@ const FooterSec = () => {
                 </div>
         
                 <div>
-                <a href='!#' className='me-4 text-reset'>
+                <Link to='!#' target='_blank' className='me-4 text-reset'>
                     <MDBIcon fab icon="facebook-f" />
-                </a>
-                <a href='!#' className='me-4 text-reset'>
+                </Link>
+                {/* <a href='!#' className='me-4 text-reset'>
                     <MDBIcon fab icon="twitter" />
                 </a>
                 <a href='!#' className='me-4 text-reset'>
@@ -40,7 +40,7 @@ const FooterSec = () => {
                 </a>
                 <a href='!#' className='me-4 text-reset'>
                     <MDBIcon fab icon="github" />
-                </a>
+                </a> */}
                 </div>
             </section>
         
@@ -65,8 +65,8 @@ const FooterSec = () => {
                                 First Distinctive
                             </h6>
                             <p>
-                                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                                consectetur adipisicing elit.
+                            Delivers innovative oil and gas services, enhancing operational 
+                            efficiency with a strong focus on safety and sustainability.
                             </p>
                         </MDBCol>
             
@@ -137,7 +137,7 @@ const FooterSec = () => {
                             <MDBIcon icon="phone" className="me-3" /> + 20 1153177510
                         </p>
                         <p>
-                            <MDBIcon icon="phone" className="me-3" /> + 002 18920173575
+                            <MDBIcon icon="phone" className="me-3" /> + 218920173575
                         </p>
                         {/* <p>
                             <MDBIcon icon="print" className="me-3" /> + 20 
