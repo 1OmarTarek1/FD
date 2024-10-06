@@ -12,7 +12,7 @@ import { ThemeProvider } from './Components/Providers/ThemeProvider/ThemeProvide
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render( 
     <ThemeProvider>
-        <Router basename='FD'>
+        <Router>
             <App />
         </Router>
     </ThemeProvider>
